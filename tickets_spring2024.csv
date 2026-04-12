@@ -1,0 +1,16 @@
+ticket_id,date_opened,date_closed,category,priority,first_contact_resolved,technician
+T2001,2024-01-15,2024-01-15,Login/Auth,High,Yes,tech_a
+T2002,2024-01-16,2024-01-17,Hardware,Medium,No,tech_b
+T2003,2024-01-17,2024-01-17,Software Install,Low,Yes,tech_c
+T2004,2024-01-18,2024-01-19,Network,High,No,tech_a
+T2005,2024-01-22,2024-01-22,Printing,Low,Yes,tech_b
+T2006,2024-01-23,2024-01-23,Login/Auth,High,Yes,tech_c
+T2007,2024-01-24,2024-01-25,Hardware,Medium,No,tech_a
+T2008,2024-01-25,2024-01-25,Account Setup,Low,Yes,tech_b
+T2009,2024-01-29,2024-01-30,Network,High,No,tech_c
+T2010,2024-01-30,2024-01-30,Printing,Low,Yes,tech_a
+T2011,2024-02-01,2024-02-01,Login/Auth,Medium,Yes,tech_b
+T2012,2024-02-02,2024-02-03,Hardware,High,No,tech_c
+T2013,2024-02-05,2024-02-05,Software Install,Low,Yes,tech_a
+T2014,2024-02-06,2024-02-06,Account Setup,Medium,Yes,tech_b
+T2015,2024-02-07,2024-02-08,Network,High,No,tech_c
