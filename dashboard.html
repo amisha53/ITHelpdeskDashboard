@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Help Desk Dashboard — SEMO Computer Labs</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f3;color:#1a1a1a;font-size:14px;min-height:100vh}
+.topnav{background:#fff;border-bottom:1px solid #e8e8e5;padding:0 28px;display:flex;justify-content:space-between;align-items:center;height:52px;position:sticky;top:0;z-index:10}
+.topnav-left{display:flex;align-items:center;gap:16px}
+.topnav-left h1{font-size:14px;font-weight:600;color:#1a1a1a}
+.topnav-left span{font-size:11px;color:#888;background:#f5f5f3;padding:2px 8px;border-radius:4px;border:1px solid #e8e8e5}
+.sem-toggle{display:flex;border:1px solid #d8d8d5;border-radius:6px;overflow:hidden}
+.sem-toggle button{padding:5px 14px;font-size:12px;font-weight:500;background:transparent;border:none;cursor:pointer;color:#666;transition:all .15s}
+.sem-toggle button.active{background:#1a1a1a;color:#fff}
+.wrap{max-width:1200px;margin:0 auto;padding:20px 24px}
+.page-header{margin-bottom:18px}
+.page-header p{font-size:11px;color:#888;margin-top:3px}
+.nav{display:flex;gap:2px;border-bottom:1px solid #e8e8e5;margin-bottom:20px}
+.nav button{padding:8px 14px;font-size:12px;font-weight:500;background:transparent;border:none;border-bottom:2px solid transparent;cursor:pointer;color:#666;transition:all .15s;margin-bottom:-1px}
+.nav button:hover{color:#1a1a1a}
+.nav button.active{color:#1a1a1a;border-bottom-color:#1a1a1a}
+.sec{display:none}.sec.on{display:block}
+.krow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.kcard{background:#fff;border:1px solid #e8e8e5;border-radius:10px;padding:14px 16px}
+.kcard .lbl{font-size:11px;color:#888;margin-bottom:4px;letter-spacing:.02em}
+.kcard .val{font-size:24px;font-weight:600;color:#1a1a1a;letter-spacing:-.5px}
+.kcard .dl{font-size:11px;margin-top:3px}
+.dl-g{color:#1D9E75}.dl-r{color:#E24B4A}
+.card{background:#fff;border:1px solid #e8e8e5;border-radius:10px;padding:16px;margin-bottom:14px}
+.card h3{font-size:11px;font-weight:600;color:#888;margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+.two{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-bottom:14px}
+.tbl{width:100%;font-size:12px;border-collapse:collapse}
+.tbl th{text-align:left;color:#888;font-weight:500;padding:6px 8px 6px 0;border-bottom:1px solid #e8e8e5;font-size:11px;white-space:nowrap}
+.tbl td{padding:7px 8px 7px 0;border-bottom:1px solid #f0f0ee;color:#1a1a1a;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:#fafaf8}
+.badge{display:inline-block;padding:2px 8px;border-radius:100px;font-size:10px;font-weight:600}
+.b-open{background:#E6F1FB;color:#185FA5}
+.b-closed{background:#EAF3DE;color:#27500A}
+.b-prog{background:#FAEEDA;color:#633806}
+.b-hw{background:#E6F1FB;color:#0C447C}
+.b-sw{background:#EAF3DE;color:#27500A}
+.b-net{background:#FAEEDA;color:#633806}
+.b-acc{background:#FBEAF0;color:#72243E}
+.b-oth{background:#F1EFE8;color:#444441}
+.filters{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.filters select,.filters input{font-size:12px;padding:5px 10px;border:1px solid #d8d8d5;border-radius:6px;background:#fff;color:#1a1a1a;outline:none}
+.filters select:focus,.filters input:focus{border-color:#888}
+.filters input{width:180px}
+.pg{font-size:11px;color:#888;display:flex;align-items:center;gap:8px;margin-top:12px}
+.pg button{font-size:11px;padding:4px 10px;border:1px solid #d8d8d5;border-radius:6px;background:#fff;cursor:pointer;color:#1a1a1a}
+.pg button:hover{background:#f5f5f3}
+.pg button:disabled{opacity:.35;cursor:not-allowed}
+.ts-staff{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:16px}
+.ts-card{background:#fff;border:1px solid #e8e8e5;border-radius:10px;padding:14px}
+.ts-av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;margin-bottom:9px}
+.ts-name{font-size:13px;font-weight:600;margin-bottom:1px;color:#1a1a1a}
+.ts-role{font-size:11px;color:#888;margin-bottom:9px}
+.ts-stat{display:flex;gap:10px;margin-bottom:8px}
+.ts-stat div{font-size:10px;color:#888}
+.ts-stat span{display:block;font-size:15px;font-weight:600;color:#1a1a1a;margin-bottom:1px}
+.bar-wrap{height:6px;background:#f0f0ee;border-radius:3px;overflow:hidden;margin-top:6px}
+.bar-fill{height:100%;border-radius:3px}
+.shift-row{display:grid;grid-template-columns:90px 55px 55px 1fr 60px;gap:6px;border-bottom:1px solid #f0f0ee;padding:6px 0;font-size:12px;align-items:center}
+.shift-hdr{font-size:10px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.04em}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.leg{display:flex;align-items:center;gap:5px;font-size:11px;color:#666}
+.leg-sq{width:9px;height:9px;border-radius:2px;flex-shrink:0}
+.note-cell{max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#888;font-size:11px;font-style:italic}
+@media(max-width:900px){.krow{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.ts-staff{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.krow{grid-template-columns:repeat(2,1fr)}.ts-staff{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="topnav-left">
+    <h1>IT Help Desk Dashboard</h1>
+    <span>SEMO Computer Labs</span>
+    <span style="color:#888;font-size:11px">Data: anonymized export — ServiceDesk ticketing system</span>
+  </div>
+  <div class="sem-toggle">
+    <button class="active" onclick="setSem('fall')">Fall 2023</button>
+    <button onclick="setSem('spring')">Spring 2024</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="nav">
+    <button class="active" onclick="setTab('overview',event)">Overview</button>
+    <button onclick="setTab('tickets',event)">Ticket log</button>
+    <button onclick="setTab('timesheets',event)">Timesheets</button>
+    <button onclick="setTab('trends',event)">Trends</button>
+  </div>
+
+  <div id="tab-overview" class="sec on">
+    <div class="krow">
+      <div class="kcard"><div class="lbl">Total tickets</div><div class="val" id="k-tot">1,247</div><div class="dl dl-g" id="k-tot-d">+12% vs spring</div></div>
+      <div class="kcard"><div class="lbl">Avg resolution (hrs)</div><div class="val" id="k-res">2.4</div><div class="dl dl-g" id="k-res-d">improved vs spring</div></div>
+      <div class="kcard"><div class="lbl">First-contact rate</div><div class="val" id="k-fcr">68%</div><div class="dl dl-r" id="k-fcr-d">-3% vs spring</div></div>
+      <div class="kcard"><div class="lbl">Avg daily volume</div><div class="val" id="k-day">13.7</div><div class="dl dl-g" id="k-day-d">peak: Mon / Thu</div></div>
+    </div>
+    <div class="card">
+      <h3>Weekly ticket volume by category</h3>
+      <div class="legend">
+        <span class="leg"><span class="leg-sq" style="background:#378ADD"></span>Hardware</span>
+        <span class="leg"><span class="leg-sq" style="background:#1D9E75"></span>Software</span>
+        <span class="leg"><span class="leg-sq" style="background:#BA7517"></span>Network</span>
+        <span class="leg"><span class="leg-sq" style="background:#D4537E"></span>Account/Access</span>
+      </div>
+      <div style="position:relative;width:100%;height:210px"><canvas id="cWeekly"></canvas></div>
+    </div>
+    <div class="two">
+      <div class="card">
+        <h3>Avg resolution time by category (hrs)</h3>
+        <div style="position:relative;width:100%;height:190px"><canvas id="cRes"></canvas></div>
+      </div>
+      <div class="card">
+        <h3>Ticket distribution</h3>
+        <div class="legend" id="pie-leg"></div>
+        <div style="position:relative;width:100%;height:160px"><canvas id="cPie"></canvas></div>
+      </div>
+    </div>
+    <div class="two">
+      <div class="card">
+        <h3>Top recurring issues</h3>
+        <div id="top-issues"></div>
+      </div>
+      <div class="card">
+        <h3>Lab location breakdown</h3>
+        <div id="lab-breakdown"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-tickets" class="sec">
+    <div class="filters">
+      <input type="text" id="search-input" placeholder="Search ticket ID, issue, requester..." oninput="renderTickets()">
+      <select id="cat-filter" onchange="renderTickets()">
+        <option value="">All categories</option>
+        <option>Hardware</option><option>Software</option><option>Network</option><option>Account/Access</option><option>Other</option>
+      </select>
+      <select id="status-filter" onchange="renderTickets()">
+        <option value="">All statuses</option>
+        <option>Closed</option><option>In Progress</option><option>Open</option>
+      </select>
+      <select id="tech-filter" onchange="renderTickets()">
+        <option value="">All technicians</option>
+        <option>T. Amisha</option><option>A. Johnson</option><option>M. Patel</option><option>R. Chen</option><option>S. Davis</option>
+      </select>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div style="overflow-x:auto">
+        <table class="tbl" style="table-layout:auto;min-width:700px">
+          <thead><tr style="background:#fafaf8">
+            <th style="padding:8px 12px;width:100px">Ticket ID</th>
+            <th style="padding:8px 8px;width:80px">Date</th>
+            <th style="padding:8px 8px;width:60px">Time</th>
+            <th style="padding:8px 8px;width:90px">Requester</th>
+            <th style="padding:8px 8px;width:90px">Lab</th>
+            <th style="padding:8px 8px">Issue</th>
+            <th style="padding:8px 8px;width:90px">Category</th>
+            <th style="padding:8px 8px;width:80px">Status</th>
+            <th style="padding:8px 8px;width:65px">Res (hrs)</th>
+            <th style="padding:8px 8px;width:85px">Technician</th>
+          </tr></thead>
+          <tbody id="ticket-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="pg">
+      <button id="pg-prev" onclick="changePage(-1)">Prev</button>
+      <span id="pg-info"></span>
+      <button id="pg-next" onclick="changePage(1)">Next</button>
+    </div>
+  </div>
+
+  <div id="tab-timesheets" class="sec">
+    <div class="ts-staff" id="ts-staff-cards"></div>
+    <div class="card">
+      <h3>Shift log</h3>
+      <div class="filters">
+        <select id="ts-tech-filter" onchange="renderShifts()">
+          <option value="">All staff</option>
+          <option>T. Amisha</option><option>A. Johnson</option><option>M. Patel</option><option>R. Chen</option><option>S. Davis</option>
+        </select>
+        <select id="ts-day-filter" onchange="renderShifts()">
+          <option value="">All days</option>
+          <option>Mon</option><option>Tue</option><option>Wed</option><option>Thu</option><option>Fri</option>
+        </select>
+      </div>
+      <div class="shift-row shift-hdr">
+        <span>Date</span><span>In</span><span>Out</span><span>Technician</span><span>Tickets</span>
+      </div>
+      <div id="shift-tbody"></div>
+      <div class="pg">
+        <button id="sh-prev" onclick="changeShiftPage(-1)">Prev</button>
+        <span id="sh-info"></span>
+        <button id="sh-next" onclick="changeShiftPage(1)">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-trends" class="sec">
+    <div class="card">
+      <h3>Semester comparison</h3>
+      <div class="legend">
+        <span class="leg"><span class="leg-sq" style="background:#378ADD"></span>Fall 2023</span>
+        <span class="leg"><span class="leg-sq" style="background:#1D9E75"></span>Spring 2024</span>
+      </div>
+      <div style="position:relative;width:100%;height:220px"><canvas id="cCompare"></canvas></div>
+    </div>
+    <div class="two">
+      <div class="card">
+        <h3>Resolution time trend by week</h3>
+        <div style="position:relative;width:100%;height:190px"><canvas id="cTrend"></canvas></div>
+      </div>
+      <div class="card">
+        <h3>Tickets by day of week</h3>
+        <div style="position:relative;width:100%;height:190px"><canvas id="cDow"></canvas></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const STAFF=['T. Amisha','A. Johnson','M. Patel','R. Chen','S. Davis'];
+const STAFF_COLORS=['#378ADD','#1D9E75','#BA7517','#D4537E','#888780'];
+const CATS=['Hardware','Software','Network','Account/Access','Other'];
+const LABS=['Kent Library 101','Kent Library 102','Carnahan Hall 214','Show Me Center Lab','Academic Hall 110'];
+const ISSUES={
+  Hardware:['Printer not connecting','Monitor no signal','Keyboard unresponsive','USB device not recognized','PC won\'t power on','Mouse not working','External drive not detected','Headphones no audio'],
+  Software:['Software install failed','Application crashing','License activation error','Browser freezing','Antivirus blocking program','OS update loop','Driver conflict','Missing system DLL'],
+  Network:['No internet connection','WiFi authentication failed','VPN not connecting','Slow network speed','Cannot reach network printer','IP conflict detected','DNS resolution error','Firewall blocking access'],
+  'Account/Access':['Password reset','Account locked out','MFA not working','Canvas login loop','Email access denied','New account setup','Permission denied on shared drive','SSO failure'],
+  Other:['Lab equipment request','Furniture issue','Room booking question','General IT inquiry']
+};
+const NOTES_CLOSED=['Replaced toner cartridge, tested print job.','Reinstalled driver, confirmed working.','Reset credentials, user verified access.','Updated network config, connectivity restored.','Cleared browser cache, issue resolved.','Reimaged workstation, software reinstalled.','Cable swap resolved signal issue.','Group policy update applied, tested OK.','Password reset via AD, user confirmed login.','Replaced peripheral, signed off by user.'];
+const NOTES_PROG=['Awaiting replacement part from IT supply room.','Escalated to senior tech for further diagnosis.','Waiting on vendor callback for license issue.','User unavailable, follow-up scheduled.'];
+
+function seededRand(seed){let s=seed;return function(){s=(s*9301+49297)%233280;return s/233280}}
+function randIntS(rng,a,b){return Math.floor(rng()*(b-a+1))+a}
+function pad(n){return n<10?'0'+n:String(n)}
+function fmtDate(d){return (d.getMonth()+1)+'/'+d.getDate()+'/'+d.getFullYear()}
+
+function genTickets(sem){
+  const rng=seededRand(sem==='fall'?42:99);
+  const startDate=sem==='fall'?new Date('2023-08-21'):new Date('2024-01-15');
+  const tickets=[];
+  const total=sem==='fall'?1247:1118;
+  for(let i=0;i<total;i++){
+    const daysIn=Math.floor(rng()*91);
+    const d=new Date(startDate);
+    d.setDate(d.getDate()+daysIn);
+    const dow=d.getDay();
+    if(dow===0||dow===6){d.setDate(d.getDate()+(dow===0?1:2))}
+    const hr=randIntS(rng,8,17);
+    const mn=randIntS(rng,0,59);
+    const cat=CATS[Math.floor(rng()*CATS.length)];
+    const issues=ISSUES[cat];
+    const issue=issues[Math.floor(rng()*issues.length)];
+    const statusR=rng();
+    const status=statusR<0.78?'Closed':statusR<0.92?'In Progress':'Open';
+    const res=status==='Closed'?+(0.5+rng()*5.5).toFixed(1):status==='In Progress'?+(1+rng()*4).toFixed(1):null;
+    const tech=STAFF[Math.floor(rng()*STAFF.length)];
+    const sid='S0'+String(Math.floor(100000+rng()*899999));
+    const masked=sid.slice(0,3)+'***'+sid.slice(-3);
+    const lab=LABS[Math.floor(rng()*LABS.length)];
+    const note=status==='Closed'?NOTES_CLOSED[Math.floor(rng()*NOTES_CLOSED.length)]:status==='In Progress'?NOTES_PROG[Math.floor(rng()*NOTES_PROG.length)]:'Ticket submitted, pending assignment.';
+    const tid='TKT-'+(sem==='fall'?'F23':'S24')+'-'+String(10000+i).slice(1);
+    tickets.push({id:tid,date:fmtDate(d),time:pad(hr)+':'+pad(mn),requester:masked,lab,issue,cat,status,res,tech,note});
+  }
+  return tickets;
+}
+
+function genShifts(sem){
+  const rng=seededRand(sem==='fall'?7:13);
+  const start=sem==='fall'?new Date('2023-08-21'):new Date('2024-01-15');
+  const shifts=[];
+  const schedules={
+    'T. Amisha':  [{day:1,in:'08:00',out:'12:00'},{day:3,in:'13:00',out:'17:00'},{day:5,in:'09:00',out:'13:00'}],
+    'A. Johnson': [{day:1,in:'13:00',out:'17:00'},{day:2,in:'08:00',out:'12:00'},{day:4,in:'13:00',out:'17:00'}],
+    'M. Patel':   [{day:2,in:'13:00',out:'17:00'},{day:3,in:'08:00',out:'12:00'},{day:5,in:'13:00',out:'17:00'}],
+    'R. Chen':    [{day:1,in:'08:00',out:'12:00'},{day:4,in:'08:00',out:'12:00'},{day:5,in:'08:00',out:'12:00'}],
+    'S. Davis':   [{day:2,in:'08:00',out:'12:00'},{day:3,in:'13:00',out:'17:00'},{day:4,in:'13:00',out:'17:00'}]
+  };
+  for(let w=0;w<16;w++){
+    STAFF.forEach(name=>{
+      const sch=schedules[name];
+      sch.forEach(s=>{
+        const d=new Date(start);
+        d.setDate(d.getDate()+w*7+(s.day===0?0:s.day));
+        const tcks=randIntS(rng,4,18);
+        shifts.push({date:fmtDate(d),day:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][s.day],tech:name,in:s.in,out:s.out,tickets:tcks,hours:4});
+      });
+    });
+  }
+  return shifts.sort((a,b)=>new Date(a.date)-new Date(b.date));
+}
+
+const SEM_DATA={
+  fall:{
+    kpi:{tot:'1,247',res:'2.4',fcr:'68%',day:'13.7',totD:{t:'+12% vs spring',g:true},resD:{t:'improved vs spring',g:true},fcrD:{t:'-3% vs spring',g:false},dayD:{t:'peak: Mon / Thu',g:true}},
+    weekly:{labels:['Wk1','Wk2','Wk3','Wk4','Wk5','Wk6','Wk7','Wk8','Wk9','Wk10','Wk11','Wk12'],
+      hw:[18,22,19,27,24,31,28,25,22,19,16,14],sw:[12,15,14,18,16,21,19,17,15,12,10,9],net:[8,10,9,12,11,14,13,11,9,8,7,6],acc:[5,7,6,9,8,10,9,8,7,6,5,4]},
+    res:{cats:['Hardware','Software','Network','Account/Access','Other'],vals:[3.1,2.2,1.8,1.4,2.9]},
+    pie:{labels:['Hardware','Software','Network','Account/Access','Other'],vals:[38,27,18,11,6]},
+    issues:[{n:'Printer not connecting',p:82},{n:'Password reset',p:74},{n:'Software install fail',p:61},{n:'Monitor no signal',p:55},{n:'USB/peripheral issues',p:47}],
+    labs:[{n:'Kent Library 101',v:412},{n:'Carnahan Hall 214',v:318},{n:'Kent Library 102',v:274},{n:'Show Me Center Lab',v:149},{n:'Academic Hall 110',v:94}],
+    dow:[98,184,212,196,210,178,0],
+    trend:[3.1,2.9,2.8,2.6,2.5,2.4,2.3,2.4,2.5,2.3,2.2,2.4],
+    staff:[
+      {name:'T. Amisha',role:'Lab Assistant II',tickets:312,hours:192,avg:2.1,color:'#378ADD',shifts:48},
+      {name:'A. Johnson',role:'Lab Assistant II',tickets:278,hours:192,avg:2.6,color:'#1D9E75',shifts:48},
+      {name:'M. Patel',role:'Lab Assistant I',tickets:241,hours:144,avg:2.3,color:'#BA7517',shifts:36},
+      {name:'R. Chen',role:'Lab Assistant I',tickets:219,hours:144,avg:2.8,color:'#D4537E',shifts:36},
+      {name:'S. Davis',role:'Lab Assistant I',tickets:197,hours:144,avg:2.2,color:'#888780',shifts:36}
+    ]
+  },
+  spring:{
+    kpi:{tot:'1,118',res:'2.7',fcr:'71%',day:'12.4',totD:{t:'-10% vs fall',g:false},resD:{t:'slightly higher vs fall',g:false},fcrD:{t:'+3% vs fall',g:true},dayD:{t:'peak: Tue / Wed',g:true}},
+    weekly:{labels:['Wk1','Wk2','Wk3','Wk4','Wk5','Wk6','Wk7','Wk8','Wk9','Wk10','Wk11','Wk12'],
+      hw:[14,17,16,21,19,25,22,20,18,15,13,11],sw:[10,12,11,15,14,18,16,14,12,10,8,7],net:[7,9,8,11,10,12,11,10,8,7,6,5],acc:[6,8,7,10,9,11,10,9,8,7,6,5]},
+    res:{cats:['Hardware','Software','Network','Account/Access','Other'],vals:[3.4,2.5,2.1,1.6,3.1]},
+    pie:{labels:['Hardware','Software','Network','Account/Access','Other'],vals:[34,29,19,12,6]},
+    issues:[{n:'Password reset',p:79},{n:'Printer not connecting',p:68},{n:'Login loop / auth fail',p:59},{n:'Browser crashing',p:52},{n:'USB/peripheral issues',p:44}],
+    labs:[{n:'Kent Library 101',v:371},{n:'Carnahan Hall 214',v:289},{n:'Kent Library 102',v:241},{n:'Show Me Center Lab',v:134},{n:'Academic Hall 110',v:83}],
+    dow:[0,172,198,183,191,162,0],
+    trend:[3.4,3.2,3.0,2.9,2.8,2.7,2.6,2.7,2.8,2.6,2.5,2.7],
+    staff:[
+      {name:'T. Amisha',role:'Lab Assistant II',tickets:281,hours:192,avg:2.4,color:'#378ADD',shifts:48},
+      {name:'A. Johnson',role:'Lab Assistant II',tickets:254,hours:192,avg:2.9,color:'#1D9E75',shifts:48},
+      {name:'M. Patel',role:'Lab Assistant I',tickets:218,hours:144,avg:2.6,color:'#BA7517',shifts:36},
+      {name:'R. Chen',role:'Lab Assistant I',tickets:197,hours:144,avg:3.1,color:'#D4537E',shifts:36},
+      {name:'S. Davis',role:'Lab Assistant I',tickets:168,hours:144,avg:2.5,color:'#888780',shifts:36}
+    ]
+  }
+};
+
+let activeSem='fall';
+let activeTab='overview';
+let allTickets=genTickets('fall');
+let allShifts=genShifts('fall');
+let ticketPage=0;const PAGE=20;
+let shiftPage=0;const SPAGE=15;
+let charts={};
+
+function destroyChart(id){if(charts[id]){charts[id].destroy();delete charts[id];}}
+
+function setSem(s){
+  activeSem=s;
+  document.querySelectorAll('.sem-toggle button').forEach((b,i)=>b.classList.toggle('active',(i===0&&s==='fall')||(i===1&&s==='spring')));
+  allTickets=genTickets(s);
+  allShifts=genShifts(s);
+  ticketPage=0;shiftPage=0;
+  renderAll();
+}
+
+function setTab(t,e){
+  activeTab=t;
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+  e.target.classList.add('active');
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.getElementById('tab-'+t).classList.add('on');
+  renderAll();
+}
+
+function renderAll(){
+  const d=SEM_DATA[activeSem];
+  document.getElementById('k-tot').textContent=d.kpi.tot;
+  document.getElementById('k-res').textContent=d.kpi.res;
+  document.getElementById('k-fcr').textContent=d.kpi.fcr;
+  document.getElementById('k-day').textContent=d.kpi.day;
+  const setDl=(id,o)=>{const el=document.getElementById(id);el.textContent=o.t;el.className='dl '+(o.g?'dl-g':'dl-r');};
+  setDl('k-tot-d',d.kpi.totD);setDl('k-res-d',d.kpi.resD);setDl('k-fcr-d',d.kpi.fcrD);setDl('k-day-d',d.kpi.dayD);
+  if(activeTab==='overview')renderOverview(d);
+  if(activeTab==='tickets')renderTickets();
+  if(activeTab==='timesheets')renderTimesheets(d);
+  if(activeTab==='trends')renderTrends(d);
+}
+
+function renderOverview(d){
+  destroyChart('cWeekly');
+  charts['cWeekly']=new Chart(document.getElementById('cWeekly'),{type:'bar',data:{labels:d.weekly.labels,datasets:[
+    {label:'Hardware',data:d.weekly.hw,backgroundColor:'#378ADD',stack:'s'},
+    {label:'Software',data:d.weekly.sw,backgroundColor:'#1D9E75',stack:'s'},
+    {label:'Network',data:d.weekly.net,backgroundColor:'#BA7517',stack:'s'},
+    {label:'Account/Access',data:d.weekly.acc,backgroundColor:'#D4537E',stack:'s'}
+  ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{font:{size:11}}}}}});
+
+  destroyChart('cRes');
+  charts['cRes']=new Chart(document.getElementById('cRes'),{type:'bar',data:{labels:d.res.cats,datasets:[{data:d.res.vals,backgroundColor:['#378ADD','#1D9E75','#BA7517','#D4537E','#888780'],borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(0,0,0,.05)'},ticks:{font:{size:11}}},y:{grid:{display:false},ticks:{font:{size:11}}}}}});
+
+  const pieColors=['#378ADD','#1D9E75','#BA7517','#D4537E','#888780'];
+  destroyChart('cPie');
+  charts['cPie']=new Chart(document.getElementById('cPie'),{type:'doughnut',data:{labels:d.pie.labels,datasets:[{data:d.pie.vals,backgroundColor:pieColors,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,cutout:'58%',plugins:{legend:{display:false}}}});
+  document.getElementById('pie-leg').innerHTML=d.pie.labels.map((l,i)=>`<span class="leg"><span class="leg-sq" style="background:${pieColors[i]}"></span>${l} ${d.pie.vals[i]}%</span>`).join('');
+
+  document.getElementById('top-issues').innerHTML=d.issues.map(is=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="font-size:12px;color:#666;width:140px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${is.n}</div><div style="flex:1;background:#f0f0ee;border-radius:4px;height:10px;overflow:hidden"><div style="height:100%;border-radius:4px;background:#378ADD;width:${is.p}%"></div></div><div style="font-size:12px;width:34px;text-align:right;color:#1a1a1a">${is.p}%</div></div>`).join('');
+
+  const maxLab=Math.max(...d.labs.map(l=>l.v));
+  document.getElementById('lab-breakdown').innerHTML=d.labs.map(l=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="font-size:12px;color:#666;width:140px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${l.n}</div><div style="flex:1;background:#f0f0ee;border-radius:4px;height:10px;overflow:hidden"><div style="height:100%;border-radius:4px;background:#1D9E75;width:${Math.round(l.v/maxLab*100)}%"></div></div><div style="font-size:12px;width:34px;text-align:right;color:#1a1a1a">${l.v}</div></div>`).join('');
+}
+
+function getFilteredTickets(){
+  const q=(document.getElementById('search-input')||{value:''}).value.toLowerCase();
+  const cat=(document.getElementById('cat-filter')||{value:''}).value;
+  const st=(document.getElementById('status-filter')||{value:''}).value;
+  const tech=(document.getElementById('tech-filter')||{value:''}).value;
+  return allTickets.filter(t=>{
+    if(q&&!(t.id.toLowerCase().includes(q)||t.issue.toLowerCase().includes(q)||t.requester.toLowerCase().includes(q)))return false;
+    if(cat&&t.cat!==cat)return false;
+    if(st&&t.status!==st)return false;
+    if(tech&&t.tech!==tech)return false;
+    return true;
+  });
+}
+
+function renderTickets(){
+  const filtered=getFilteredTickets();
+  const total=filtered.length;
+  const pages=Math.max(1,Math.ceil(total/PAGE));
+  if(ticketPage>=pages)ticketPage=pages-1;
+  const slice=filtered.slice(ticketPage*PAGE,(ticketPage+1)*PAGE);
+  const catClass={Hardware:'b-hw',Software:'b-sw',Network:'b-net','Account/Access':'b-acc',Other:'b-oth'};
+  const stClass={Closed:'b-closed','In Progress':'b-prog',Open:'b-open'};
+  document.getElementById('ticket-tbody').innerHTML=slice.map(t=>`<tr>
+    <td style="padding:7px 12px;font-family:monospace;font-size:11px;color:#444">${t.id}</td>
+    <td style="padding:7px 8px">${t.date}</td>
+    <td style="padding:7px 8px;color:#888">${t.time}</td>
+    <td style="padding:7px 8px;font-family:monospace;font-size:11px;color:#888">${t.requester}</td>
+    <td style="padding:7px 8px;max-width:100px;overflow:hidden;text-overflow:ellipsis" title="${t.lab}">${t.lab.split(' ').slice(0,2).join(' ')}</td>
+    <td style="padding:7px 8px;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${t.issue}">${t.issue}</td>
+    <td style="padding:7px 8px"><span class="badge ${catClass[t.cat]||'b-oth'}">${t.cat}</span></td>
+    <td style="padding:7px 8px"><span class="badge ${stClass[t.status]}">${t.status}</span></td>
+    <td style="padding:7px 8px;color:${t.res!==null?'#1a1a1a':'#ccc'}">${t.res!==null?t.res:'--'}</td>
+    <td style="padding:7px 8px;font-weight:500">${t.tech}</td>
+  </tr>`).join('');
+  document.getElementById('pg-info').textContent=`Page ${ticketPage+1} of ${pages} (${total} tickets)`;
+  document.getElementById('pg-prev').disabled=ticketPage===0;
+  document.getElementById('pg-next').disabled=ticketPage>=pages-1;
+}
+
+function changePage(dir){ticketPage+=dir;renderTickets();}
+
+function renderTimesheets(d){
+  const initials=n=>n.split(' ').map(p=>p[0]).join('');
+  document.getElementById('ts-staff-cards').innerHTML=d.staff.map(s=>`<div class="ts-card">
+    <div class="ts-av" style="background:${s.color}22;color:${s.color}">${initials(s.name)}</div>
+    <div class="ts-name">${s.name}</div>
+    <div class="ts-role">${s.role}</div>
+    <div class="ts-stat">
+      <div><span>${s.tickets}</span>tickets</div>
+      <div><span>${s.hours}h</span>logged</div>
+      <div><span>${s.avg}h</span>avg res</div>
+    </div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">${s.shifts} shifts this semester</div>
+    <div class="bar-wrap"><div class="bar-fill" style="width:${Math.round(s.tickets/d.staff[0].tickets*100)}%;background:${s.color}"></div></div>
+  </div>`).join('');
+  renderShifts();
+}
+
+function renderShifts(){
+  const techF=(document.getElementById('ts-tech-filter')||{value:''}).value;
+  const dayF=(document.getElementById('ts-day-filter')||{value:''}).value;
+  const filtered=allShifts.filter(s=>{
+    if(techF&&s.tech!==techF)return false;
+    if(dayF&&s.day!==dayF)return false;
+    return true;
+  });
+  const pages=Math.max(1,Math.ceil(filtered.length/SPAGE));
+  if(shiftPage>=pages)shiftPage=pages-1;
+  const slice=filtered.slice(shiftPage*SPAGE,(shiftPage+1)*SPAGE);
+  const techColor={};STAFF.forEach((s,i)=>techColor[s]=STAFF_COLORS[i]);
+  document.getElementById('shift-tbody').innerHTML=slice.map(s=>`<div class="shift-row">
+    <span style="color:#444">${s.date}</span>
+    <span style="color:#888">${s.in}</span>
+    <span style="color:#888">${s.out}</span>
+    <span style="font-weight:600;color:${techColor[s.tech]||'#1a1a1a'}">${s.tech}</span>
+    <span style="color:#1a1a1a">${s.tickets}</span>
+  </div>`).join('');
+  document.getElementById('sh-info').textContent=`Page ${shiftPage+1} of ${pages}`;
+  document.getElementById('sh-prev').disabled=shiftPage===0;
+  document.getElementById('sh-next').disabled=shiftPage>=pages-1;
+}
+
+function changeShiftPage(dir){shiftPage+=dir;renderShifts();}
+
+function renderTrends(d){
+  destroyChart('cCompare');
+  charts['cCompare']=new Chart(document.getElementById('cCompare'),{type:'bar',data:{
+    labels:['Total tickets','Avg res time (×10)','First-contact rate %','Avg daily vol (×10)'],
+    datasets:[
+      {label:'Fall 2023',data:[1247,24,68,137],backgroundColor:'#378ADD'},
+      {label:'Spring 2024',data:[1118,27,71,124],backgroundColor:'#1D9E75'}
+    ]
+  },options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{font:{size:11}}}}}});
+
+  destroyChart('cTrend');
+  charts['cTrend']=new Chart(document.getElementById('cTrend'),{type:'line',data:{labels:d.weekly.labels,datasets:[{label:'Avg res (hrs)',data:d.trend,borderColor:'#378ADD',backgroundColor:'transparent',tension:.3,pointRadius:3,pointBackgroundColor:'#378ADD'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{font:{size:11}}}}}});
+
+  destroyChart('cDow');
+  charts['cDow']=new Chart(document.getElementById('cDow'),{type:'bar',data:{labels:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],datasets:[{data:d.dow,backgroundColor:d.dow.map((v,i)=>i===0||i===6?'#D3D1C7':'#378ADD'),borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{font:{size:11}}}}}});
+}
+
+renderAll();
+</script>
+</body>
+</html>
