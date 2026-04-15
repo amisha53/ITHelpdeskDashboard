@@ -1,16 +1,1248 @@
-ticket_id,date_opened,date_closed,category,priority,first_contact_resolved,technician
-T1001,2023-08-28,2023-08-28,Login/Auth,High,Yes,tech_a
-T1002,2023-08-29,2023-08-30,Hardware,Medium,No,tech_b
-T1003,2023-08-30,2023-08-30,Software Install,Low,Yes,tech_a
-T1004,2023-09-01,2023-09-02,Network,High,No,tech_c
-T1005,2023-09-02,2023-09-02,Printing,Low,Yes,tech_b
-T1006,2023-09-05,2023-09-05,Login/Auth,High,Yes,tech_a
-T1007,2023-09-06,2023-09-08,Hardware,Medium,No,tech_c
-T1008,2023-09-07,2023-09-07,Software Install,Low,Yes,tech_b
-T1009,2023-09-10,2023-09-11,Network,High,No,tech_a
-T1010,2023-09-11,2023-09-11,Printing,Low,Yes,tech_c
-T1011,2023-09-12,2023-09-12,Login/Auth,Medium,Yes,tech_b
-T1012,2023-09-13,2023-09-14,Hardware,High,No,tech_a
-T1013,2023-09-14,2023-09-14,Account Setup,Low,Yes,tech_c
-T1014,2023-09-18,2023-09-18,Software Install,Medium,Yes,tech_b
-T1015,2023-09-19,2023-09-20,Network,High,No,tech_a
+ticket_id,date,time,requester_id,lab_location,issue_description,category,status,resolution_hrs,assigned_tech,resolution_notes
+TKT-F23-0000,11/09/2023,15:57,S0***696,Show Me Center Lab,Canvas login loop,Account/Access,Closed,3.8,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0001,09/19/2023,14:56,S0***849,Kent Library 101,General IT inquiry,Other,Closed,1.2,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0002,09/18/2023,12:40,S0***216,Academic Hall 110,USB device not recognized,Hardware,Closed,2.9,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0003,09/06/2023,15:11,S0***573,Show Me Center Lab,OS update loop,Software,Closed,0.7,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0004,09/18/2023,13:04,S0***366,Kent Library 101,Keyboard unresponsive,Hardware,In Progress,4.5,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0005,10/16/2023,10:32,S0***704,Show Me Center Lab,IP conflict detected,Network,Closed,4.7,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0006,10/17/2023,13:11,S0***367,Academic Hall 110,No internet connection,Network,Closed,3.0,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0007,09/18/2023,11:30,S0***799,Carnahan Hall 214,WiFi authentication failed,Network,Closed,3.1,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0008,10/02/2023,15:53,S0***110,Kent Library 101,Printer not connecting,Hardware,Closed,3.1,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0009,11/06/2023,12:33,S0***078,Kent Library 102,General IT inquiry,Other,Closed,3.1,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0010,11/14/2023,12:48,S0***148,Carnahan Hall 214,PC won't power on,Hardware,Closed,3.3,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0011,10/02/2023,13:20,S0***431,Kent Library 101,Monitor no signal,Hardware,Closed,1.4,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0012,09/25/2023,09:51,S0***705,Kent Library 101,Lab equipment request,Other,Closed,4.1,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0013,10/27/2023,14:35,S0***414,Kent Library 101,OS update loop,Software,Closed,3.7,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0014,09/04/2023,10:26,S0***669,Academic Hall 110,Browser freezing,Software,In Progress,2.6,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0015,11/03/2023,10:41,S0***249,Kent Library 101,Driver conflict,Software,Closed,3.7,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0016,09/20/2023,11:26,S0***597,Show Me Center Lab,IP conflict detected,Network,Closed,1.9,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0017,09/05/2023,11:48,S0***824,Kent Library 102,PC won't power on,Hardware,In Progress,4.1,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0018,10/30/2023,11:37,S0***710,Academic Hall 110,WiFi authentication failed,Network,Closed,5.1,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0019,09/15/2023,11:54,S0***697,Academic Hall 110,MFA not working,Account/Access,Closed,1.1,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0020,08/28/2023,12:59,S0***896,Academic Hall 110,Application crashing,Software,Closed,5.4,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0021,10/31/2023,08:15,S0***087,Kent Library 101,Browser freezing,Software,Closed,0.5,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0022,09/04/2023,16:36,S0***713,Kent Library 102,Monitor no signal,Hardware,In Progress,4.0,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0023,09/29/2023,10:35,S0***884,Kent Library 102,DNS resolution error,Network,Closed,2.1,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0024,10/03/2023,15:09,S0***381,Kent Library 101,Application crashing,Software,Closed,4.2,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0025,10/12/2023,16:06,S0***646,Carnahan Hall 214,IP conflict detected,Network,In Progress,4.0,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-0026,11/07/2023,09:11,S0***790,Academic Hall 110,Monitor no signal,Hardware,Closed,3.6,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0027,09/28/2023,10:55,S0***591,Show Me Center Lab,Furniture issue,Other,Closed,2.8,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0028,08/29/2023,15:59,S0***495,Kent Library 101,Slow network speed,Network,Closed,4.4,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0029,11/13/2023,15:22,S0***839,Kent Library 101,Email access denied,Account/Access,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0030,11/10/2023,09:03,S0***813,Carnahan Hall 214,USB device not recognized,Hardware,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0031,09/11/2023,16:18,S0***004,Show Me Center Lab,Driver conflict,Software,Closed,2.1,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0032,10/02/2023,08:11,S0***630,Academic Hall 110,Room booking question,Other,In Progress,4.6,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-0033,09/14/2023,09:22,S0***801,Kent Library 102,MFA not working,Account/Access,Closed,5.7,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0034,10/06/2023,10:48,S0***297,Kent Library 102,Account locked out,Account/Access,Closed,3.4,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0035,10/02/2023,13:16,S0***562,Show Me Center Lab,General IT inquiry,Other,Closed,3.2,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0036,09/15/2023,14:33,S0***706,Carnahan Hall 214,Lab equipment request,Other,Closed,5.0,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0037,08/24/2023,11:08,S0***509,Carnahan Hall 214,General IT inquiry,Other,Closed,5.3,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0038,10/12/2023,09:44,S0***412,Show Me Center Lab,WiFi authentication failed,Network,Closed,0.6,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0039,11/13/2023,16:19,S0***528,Carnahan Hall 214,Monitor no signal,Hardware,Closed,1.4,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0040,09/25/2023,14:56,S0***636,Show Me Center Lab,Software install failed,Software,Closed,5.3,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0041,09/25/2023,09:10,S0***178,Show Me Center Lab,USB device not recognized,Hardware,Closed,0.8,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0042,10/30/2023,13:14,S0***467,Show Me Center Lab,Lab equipment request,Other,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0043,09/06/2023,09:59,S0***870,Academic Hall 110,MFA not working,Account/Access,Closed,3.5,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0044,11/01/2023,11:10,S0***486,Carnahan Hall 214,Keyboard unresponsive,Hardware,Closed,5.8,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0045,09/22/2023,11:13,S0***094,Kent Library 102,General IT inquiry,Other,Closed,4.7,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0046,09/14/2023,16:43,S0***137,Academic Hall 110,Printer not connecting,Hardware,Closed,5.4,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0047,10/02/2023,11:53,S0***725,Carnahan Hall 214,Driver conflict,Software,Closed,1.3,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0048,09/28/2023,12:19,S0***638,Academic Hall 110,General IT inquiry,Other,Closed,2.1,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0049,09/04/2023,10:30,S0***319,Show Me Center Lab,Email access denied,Account/Access,Closed,5.1,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0050,09/26/2023,14:51,S0***881,Show Me Center Lab,Keyboard unresponsive,Hardware,In Progress,2.9,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-0051,11/17/2023,12:32,S0***094,Kent Library 101,Lab equipment request,Other,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0052,09/25/2023,11:46,S0***184,Academic Hall 110,Lab equipment request,Other,In Progress,4.9,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0053,11/14/2023,10:08,S0***597,Carnahan Hall 214,Account locked out,Account/Access,Closed,4.5,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0054,08/28/2023,13:05,S0***778,Kent Library 102,WiFi authentication failed,Network,Closed,4.3,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0055,10/16/2023,12:02,S0***839,Kent Library 101,DNS resolution error,Network,Closed,3.7,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0056,09/15/2023,13:09,S0***557,Kent Library 102,Furniture issue,Other,Closed,2.6,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0057,10/16/2023,16:47,S0***377,Carnahan Hall 214,Email access denied,Account/Access,Closed,1.2,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0058,09/12/2023,09:37,S0***410,Academic Hall 110,USB device not recognized,Hardware,Closed,2.8,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0059,09/11/2023,16:21,S0***435,Show Me Center Lab,Mouse not working,Hardware,In Progress,2.8,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0060,10/10/2023,12:13,S0***797,Show Me Center Lab,SSO failure,Account/Access,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0061,11/06/2023,15:00,S0***015,Carnahan Hall 214,PC won't power on,Hardware,In Progress,4.4,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0062,08/28/2023,10:55,S0***335,Kent Library 101,Driver conflict,Software,Closed,3.5,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0063,10/05/2023,12:50,S0***868,Academic Hall 110,Lab equipment request,Other,Closed,3.8,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0064,08/28/2023,08:30,S0***393,Show Me Center Lab,USB device not recognized,Hardware,Closed,1.7,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0065,11/06/2023,09:08,S0***352,Kent Library 102,Email access denied,Account/Access,Closed,0.7,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0066,09/25/2023,09:38,S0***857,Show Me Center Lab,IP conflict detected,Network,Closed,3.4,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0067,11/15/2023,10:16,S0***686,Academic Hall 110,Driver conflict,Software,Closed,1.0,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0068,08/30/2023,10:10,S0***284,Carnahan Hall 214,Room booking question,Other,Closed,5.5,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-0069,09/21/2023,16:26,S0***762,Show Me Center Lab,Email access denied,Account/Access,Closed,2.3,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0070,08/28/2023,10:53,S0***897,Show Me Center Lab,Furniture issue,Other,Closed,0.7,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0071,10/04/2023,11:35,S0***134,Academic Hall 110,Canvas login loop,Account/Access,Closed,4.4,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0072,11/13/2023,12:48,S0***584,Show Me Center Lab,Lab equipment request,Other,In Progress,3.5,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0073,08/25/2023,13:58,S0***025,Carnahan Hall 214,Room booking question,Other,Closed,4.0,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0074,10/11/2023,16:58,S0***900,Kent Library 101,Canvas login loop,Account/Access,In Progress,1.1,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0075,10/26/2023,11:20,S0***323,Kent Library 102,WiFi authentication failed,Network,Closed,5.8,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0076,09/28/2023,15:03,S0***069,Academic Hall 110,Account locked out,Account/Access,Closed,3.2,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0077,11/13/2023,13:54,S0***583,Kent Library 101,Driver conflict,Software,Closed,3.1,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0078,09/21/2023,10:38,S0***978,Show Me Center Lab,Slow network speed,Network,Closed,5.6,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0079,11/01/2023,12:45,S0***029,Show Me Center Lab,USB device not recognized,Hardware,In Progress,1.7,M. Patel,Escalated to senior tech for further diagnosis.
+TKT-F23-0080,09/01/2023,16:58,S0***183,Academic Hall 110,Keyboard unresponsive,Hardware,Closed,3.8,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0081,09/20/2023,13:15,S0***549,Academic Hall 110,Software install failed,Software,Closed,1.2,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0082,10/30/2023,10:39,S0***907,Kent Library 102,License activation error,Software,Closed,2.0,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0083,10/30/2023,13:45,S0***698,Show Me Center Lab,Room booking question,Other,In Progress,1.0,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0084,09/18/2023,09:47,S0***038,Kent Library 102,DNS resolution error,Network,Closed,1.2,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0085,11/09/2023,13:19,S0***701,Kent Library 102,Keyboard unresponsive,Hardware,Closed,2.6,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0086,10/02/2023,16:51,S0***132,Carnahan Hall 214,Printer not connecting,Hardware,In Progress,2.1,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0087,11/03/2023,10:48,S0***442,Carnahan Hall 214,SSO failure,Account/Access,Closed,3.3,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0088,10/30/2023,09:21,S0***412,Kent Library 101,Mouse not working,Hardware,Closed,0.8,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0089,10/27/2023,15:50,S0***481,Kent Library 102,License activation error,Software,Closed,5.9,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0090,10/03/2023,14:55,S0***764,Kent Library 101,Slow network speed,Network,Closed,5.2,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0091,11/15/2023,13:19,S0***038,Show Me Center Lab,Email access denied,Account/Access,Closed,5.5,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0092,09/11/2023,13:17,S0***747,Carnahan Hall 214,Printer not connecting,Hardware,Closed,4.4,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0093,11/06/2023,08:41,S0***003,Show Me Center Lab,Browser freezing,Software,Closed,4.7,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0094,08/28/2023,11:49,S0***582,Carnahan Hall 214,Furniture issue,Other,Closed,3.2,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0095,10/02/2023,08:47,S0***930,Academic Hall 110,PC won't power on,Hardware,In Progress,1.2,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0096,10/09/2023,15:43,S0***158,Show Me Center Lab,Room booking question,Other,Closed,5.0,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0097,10/23/2023,08:25,S0***043,Academic Hall 110,Furniture issue,Other,In Progress,2.7,R. Chen,"User unavailable, follow-up scheduled."
+TKT-F23-0098,08/28/2023,13:56,S0***030,Show Me Center Lab,Lab equipment request,Other,Closed,3.7,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0099,08/29/2023,13:34,S0***541,Kent Library 101,Email access denied,Account/Access,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0100,09/27/2023,11:22,S0***388,Carnahan Hall 214,Account locked out,Account/Access,Closed,5.5,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0101,10/27/2023,13:54,S0***116,Kent Library 101,Driver conflict,Software,Closed,5.7,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0102,11/20/2023,09:02,S0***501,Show Me Center Lab,Room booking question,Other,Closed,4.0,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0103,09/18/2023,14:48,S0***988,Kent Library 101,Driver conflict,Software,Closed,4.6,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0104,08/29/2023,14:32,S0***688,Show Me Center Lab,No internet connection,Network,Closed,3.2,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0105,11/17/2023,09:37,S0***379,Kent Library 102,PC won't power on,Hardware,Closed,4.7,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0106,10/20/2023,11:58,S0***504,Carnahan Hall 214,Password reset,Account/Access,Closed,5.1,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0107,09/28/2023,16:06,S0***176,Kent Library 102,PC won't power on,Hardware,Closed,5.2,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0108,08/31/2023,16:59,S0***172,Kent Library 102,Lab equipment request,Other,Closed,5.4,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0109,08/24/2023,14:25,S0***937,Kent Library 101,Slow network speed,Network,Closed,4.9,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0110,09/18/2023,15:09,S0***582,Academic Hall 110,VPN not connecting,Network,Closed,3.8,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0111,08/22/2023,15:42,S0***883,Kent Library 102,General IT inquiry,Other,Closed,3.8,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0112,08/22/2023,13:45,S0***287,Carnahan Hall 214,DNS resolution error,Network,Closed,1.6,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0113,09/18/2023,16:18,S0***903,Academic Hall 110,Email access denied,Account/Access,Closed,2.2,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0114,09/12/2023,13:22,S0***510,Academic Hall 110,Password reset,Account/Access,Closed,3.1,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0115,09/06/2023,12:34,S0***553,Carnahan Hall 214,USB device not recognized,Hardware,In Progress,3.5,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-0116,08/25/2023,16:06,S0***142,Show Me Center Lab,Furniture issue,Other,Closed,3.7,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0117,09/25/2023,14:34,S0***055,Show Me Center Lab,Lab equipment request,Other,Closed,1.0,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0118,09/04/2023,16:26,S0***736,Carnahan Hall 214,Account locked out,Account/Access,In Progress,3.7,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0119,08/29/2023,11:09,S0***297,Kent Library 102,Password reset,Account/Access,Closed,5.9,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0120,08/23/2023,15:52,S0***515,Kent Library 101,Furniture issue,Other,Closed,0.7,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0121,10/02/2023,12:56,S0***835,Academic Hall 110,USB device not recognized,Hardware,In Progress,4.6,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-0122,08/22/2023,16:02,S0***368,Academic Hall 110,Lab equipment request,Other,Closed,1.1,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0123,10/30/2023,12:51,S0***893,Academic Hall 110,Browser freezing,Software,Closed,5.5,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0124,10/23/2023,15:40,S0***852,Show Me Center Lab,Printer not connecting,Hardware,Closed,5.4,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0125,09/27/2023,16:19,S0***357,Kent Library 101,Printer not connecting,Hardware,Closed,3.5,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0126,09/04/2023,10:07,S0***186,Show Me Center Lab,Room booking question,Other,Closed,2.0,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0127,10/02/2023,12:11,S0***784,Kent Library 102,Account locked out,Account/Access,Closed,1.9,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0128,11/07/2023,10:37,S0***851,Kent Library 101,Canvas login loop,Account/Access,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0129,09/11/2023,14:50,S0***310,Academic Hall 110,Software install failed,Software,Closed,2.4,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0130,09/08/2023,11:05,S0***316,Kent Library 101,Printer not connecting,Hardware,Closed,1.9,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0131,08/23/2023,16:19,S0***644,Kent Library 101,VPN not connecting,Network,Closed,0.9,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0132,09/15/2023,10:39,S0***743,Kent Library 102,Room booking question,Other,Closed,6.0,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-0133,10/02/2023,16:10,S0***720,Academic Hall 110,Room booking question,Other,Closed,2.5,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0134,11/15/2023,10:44,S0***356,Kent Library 101,Slow network speed,Network,Closed,5.0,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0135,11/16/2023,08:21,S0***093,Carnahan Hall 214,DNS resolution error,Network,Closed,1.0,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0136,11/06/2023,14:20,S0***042,Kent Library 102,Slow network speed,Network,Closed,2.9,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0137,09/08/2023,11:05,S0***701,Carnahan Hall 214,Software install failed,Software,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0138,09/15/2023,15:59,S0***179,Carnahan Hall 214,Slow network speed,Network,Closed,1.1,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0139,09/25/2023,16:28,S0***227,Academic Hall 110,Mouse not working,Hardware,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0140,10/09/2023,15:22,S0***232,Show Me Center Lab,General IT inquiry,Other,Closed,2.8,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0141,10/10/2023,16:27,S0***561,Academic Hall 110,IP conflict detected,Network,Closed,2.9,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0142,10/23/2023,11:19,S0***659,Academic Hall 110,Account locked out,Account/Access,Closed,1.7,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0143,09/25/2023,16:02,S0***637,Kent Library 101,Driver conflict,Software,Closed,1.1,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0144,08/28/2023,15:27,S0***272,Carnahan Hall 214,USB device not recognized,Hardware,Closed,4.7,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0145,11/13/2023,16:36,S0***009,Show Me Center Lab,Lab equipment request,Other,In Progress,4.6,R. Chen,Awaiting replacement part from IT supply room.
+TKT-F23-0146,09/19/2023,11:47,S0***020,Kent Library 102,Browser freezing,Software,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0147,09/12/2023,16:31,S0***617,Carnahan Hall 214,VPN not connecting,Network,Closed,4.4,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0148,10/23/2023,11:21,S0***095,Kent Library 101,Browser freezing,Software,Closed,2.5,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0149,11/20/2023,08:42,S0***231,Show Me Center Lab,License activation error,Software,Closed,3.8,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0150,09/18/2023,13:36,S0***468,Show Me Center Lab,Lab equipment request,Other,Closed,1.5,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0151,11/15/2023,13:23,S0***917,Show Me Center Lab,USB device not recognized,Hardware,In Progress,2.2,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0152,10/17/2023,16:26,S0***358,Kent Library 101,Furniture issue,Other,Closed,5.4,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0153,08/24/2023,16:39,S0***234,Show Me Center Lab,IP conflict detected,Network,In Progress,1.7,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0154,09/28/2023,09:35,S0***655,Academic Hall 110,Account locked out,Account/Access,Closed,2.2,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0155,10/23/2023,15:11,S0***401,Kent Library 102,Browser freezing,Software,Closed,2.7,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0156,08/25/2023,10:15,S0***916,Kent Library 101,SSO failure,Account/Access,Closed,2.0,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0157,10/23/2023,14:32,S0***311,Kent Library 101,License activation error,Software,Closed,5.8,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0158,10/25/2023,09:33,S0***192,Show Me Center Lab,Browser freezing,Software,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0159,08/29/2023,16:14,S0***114,Kent Library 102,Furniture issue,Other,Closed,5.5,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0160,11/14/2023,11:46,S0***360,Show Me Center Lab,General IT inquiry,Other,Closed,3.7,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0161,10/30/2023,11:35,S0***375,Carnahan Hall 214,Monitor no signal,Hardware,Closed,5.4,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0162,10/20/2023,10:28,S0***269,Kent Library 102,IP conflict detected,Network,In Progress,4.3,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0163,10/30/2023,16:55,S0***820,Kent Library 102,USB device not recognized,Hardware,Closed,4.5,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0164,11/13/2023,09:37,S0***474,Academic Hall 110,Slow network speed,Network,Closed,5.9,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0165,08/31/2023,13:33,S0***341,Kent Library 102,Browser freezing,Software,Closed,3.2,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0166,10/23/2023,09:46,S0***199,Kent Library 102,MFA not working,Account/Access,Closed,4.9,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0167,08/23/2023,13:52,S0***227,Carnahan Hall 214,Monitor no signal,Hardware,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0168,08/28/2023,08:32,S0***279,Kent Library 102,Mouse not working,Hardware,Closed,5.8,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0169,09/04/2023,10:30,S0***433,Kent Library 102,Room booking question,Other,In Progress,1.5,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-0170,08/31/2023,13:31,S0***800,Academic Hall 110,General IT inquiry,Other,Closed,2.7,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0171,09/18/2023,08:41,S0***156,Kent Library 101,DNS resolution error,Network,In Progress,2.2,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-0172,08/28/2023,08:32,S0***949,Kent Library 101,General IT inquiry,Other,Closed,4.8,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0173,09/20/2023,11:18,S0***288,Show Me Center Lab,Driver conflict,Software,Closed,4.1,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0174,10/19/2023,13:36,S0***950,Kent Library 102,Password reset,Account/Access,Closed,4.1,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0175,11/20/2023,14:53,S0***381,Kent Library 102,Browser freezing,Software,Closed,2.2,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0176,08/30/2023,15:35,S0***692,Kent Library 101,Account locked out,Account/Access,Closed,2.1,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0177,10/30/2023,12:53,S0***407,Kent Library 101,General IT inquiry,Other,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0178,11/08/2023,12:49,S0***246,Kent Library 102,PC won't power on,Hardware,Closed,1.1,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0179,09/18/2023,08:33,S0***409,Carnahan Hall 214,Room booking question,Other,Closed,1.7,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0180,10/10/2023,10:05,S0***716,Academic Hall 110,PC won't power on,Hardware,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0181,09/11/2023,11:14,S0***073,Kent Library 102,General IT inquiry,Other,In Progress,1.4,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0182,11/07/2023,14:37,S0***866,Kent Library 102,Mouse not working,Hardware,In Progress,2.7,M. Patel,Escalated to senior tech for further diagnosis.
+TKT-F23-0183,10/20/2023,15:35,S0***204,Kent Library 101,Mouse not working,Hardware,Closed,5.0,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0184,09/07/2023,13:44,S0***867,Kent Library 101,Slow network speed,Network,Closed,0.6,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0185,09/25/2023,16:33,S0***299,Academic Hall 110,Monitor no signal,Hardware,Closed,3.4,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0186,08/22/2023,16:27,S0***609,Kent Library 102,PC won't power on,Hardware,Closed,0.7,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0187,11/10/2023,08:36,S0***578,Academic Hall 110,Driver conflict,Software,Closed,3.4,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0188,10/04/2023,13:22,S0***648,Show Me Center Lab,Keyboard unresponsive,Hardware,In Progress,1.3,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0189,10/06/2023,09:23,S0***931,Show Me Center Lab,Account locked out,Account/Access,Closed,1.7,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0190,11/13/2023,10:24,S0***205,Kent Library 101,Room booking question,Other,Closed,1.7,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0191,11/02/2023,10:39,S0***914,Show Me Center Lab,General IT inquiry,Other,In Progress,3.5,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0192,10/25/2023,11:00,S0***170,Kent Library 101,Software install failed,Software,In Progress,4.9,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-0193,11/08/2023,15:44,S0***749,Show Me Center Lab,General IT inquiry,Other,In Progress,3.5,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-0194,11/09/2023,12:59,S0***097,Show Me Center Lab,MFA not working,Account/Access,Closed,5.0,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0195,09/11/2023,16:51,S0***325,Academic Hall 110,Email access denied,Account/Access,Closed,5.1,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0196,09/19/2023,12:10,S0***209,Kent Library 101,Email access denied,Account/Access,Closed,2.7,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0197,09/20/2023,16:58,S0***196,Carnahan Hall 214,License activation error,Software,In Progress,1.7,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-0198,10/17/2023,13:32,S0***397,Kent Library 101,DNS resolution error,Network,Closed,2.9,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0199,11/06/2023,13:18,S0***587,Show Me Center Lab,Room booking question,Other,Closed,0.8,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0200,10/25/2023,08:09,S0***283,Kent Library 102,OS update loop,Software,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0201,10/17/2023,12:47,S0***668,Academic Hall 110,Password reset,Account/Access,Closed,3.9,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0202,10/12/2023,08:50,S0***155,Academic Hall 110,Account locked out,Account/Access,In Progress,2.3,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-0203,10/17/2023,13:31,S0***855,Show Me Center Lab,Printer not connecting,Hardware,Closed,2.5,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0204,10/02/2023,11:12,S0***546,Kent Library 102,Password reset,Account/Access,In Progress,3.3,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0205,10/30/2023,12:49,S0***671,Kent Library 101,Furniture issue,Other,Closed,2.0,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0206,10/31/2023,13:54,S0***344,Kent Library 102,Slow network speed,Network,Closed,3.5,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0207,09/29/2023,16:24,S0***339,Kent Library 101,WiFi authentication failed,Network,Closed,3.5,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0208,11/15/2023,14:07,S0***104,Carnahan Hall 214,Email access denied,Account/Access,Closed,0.8,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0209,10/05/2023,11:48,S0***748,Show Me Center Lab,Lab equipment request,Other,Closed,1.2,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0210,09/04/2023,14:58,S0***050,Academic Hall 110,Driver conflict,Software,Closed,0.9,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0211,10/30/2023,11:17,S0***453,Show Me Center Lab,IP conflict detected,Network,Closed,2.1,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0212,09/21/2023,11:46,S0***070,Kent Library 102,Furniture issue,Other,Closed,4.2,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0213,09/11/2023,10:28,S0***678,Kent Library 102,General IT inquiry,Other,Closed,4.8,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0214,10/30/2023,09:56,S0***720,Carnahan Hall 214,MFA not working,Account/Access,Closed,3.5,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0215,11/13/2023,09:24,S0***009,Kent Library 101,General IT inquiry,Other,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0216,09/01/2023,09:17,S0***911,Show Me Center Lab,IP conflict detected,Network,Closed,3.6,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0217,11/17/2023,12:22,S0***028,Kent Library 101,Account locked out,Account/Access,In Progress,1.9,M. Patel,Escalated to senior tech for further diagnosis.
+TKT-F23-0218,11/14/2023,15:29,S0***136,Show Me Center Lab,Browser freezing,Software,Closed,2.8,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0219,09/28/2023,14:14,S0***678,Kent Library 102,Canvas login loop,Account/Access,In Progress,1.5,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0220,09/20/2023,14:48,S0***767,Kent Library 101,Room booking question,Other,Closed,1.1,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0221,09/11/2023,12:48,S0***180,Kent Library 101,PC won't power on,Hardware,Closed,1.4,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0222,08/21/2023,10:43,S0***361,Carnahan Hall 214,DNS resolution error,Network,Closed,4.8,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0223,10/05/2023,14:58,S0***422,Kent Library 102,WiFi authentication failed,Network,Closed,4.1,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0224,10/03/2023,15:44,S0***637,Kent Library 102,USB device not recognized,Hardware,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0225,08/21/2023,11:26,S0***225,Carnahan Hall 214,Browser freezing,Software,Closed,4.4,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0226,10/03/2023,08:22,S0***138,Carnahan Hall 214,DNS resolution error,Network,In Progress,2.4,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0227,10/23/2023,10:03,S0***819,Show Me Center Lab,Furniture issue,Other,Closed,2.7,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0228,10/02/2023,10:54,S0***380,Kent Library 102,Canvas login loop,Account/Access,Closed,3.4,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0229,10/09/2023,13:05,S0***598,Kent Library 102,Room booking question,Other,Closed,4.4,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0230,09/28/2023,11:58,S0***919,Show Me Center Lab,SSO failure,Account/Access,Closed,0.7,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0231,11/02/2023,09:12,S0***452,Kent Library 102,Driver conflict,Software,In Progress,1.3,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-0232,10/23/2023,13:30,S0***976,Show Me Center Lab,Furniture issue,Other,Closed,6.0,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0233,08/28/2023,08:07,S0***935,Academic Hall 110,General IT inquiry,Other,Closed,3.0,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0234,10/16/2023,14:55,S0***057,Kent Library 102,Furniture issue,Other,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0235,10/19/2023,12:51,S0***877,Kent Library 101,PC won't power on,Hardware,Closed,1.6,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0236,11/02/2023,10:10,S0***911,Academic Hall 110,Monitor no signal,Hardware,Closed,5.9,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0237,09/14/2023,12:24,S0***935,Kent Library 102,SSO failure,Account/Access,Closed,3.3,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0238,08/31/2023,12:47,S0***394,Carnahan Hall 214,MFA not working,Account/Access,Closed,2.7,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0239,11/13/2023,13:11,S0***399,Carnahan Hall 214,Driver conflict,Software,Closed,1.2,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-0240,11/07/2023,16:53,S0***728,Show Me Center Lab,General IT inquiry,Other,Closed,1.0,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0241,10/16/2023,11:01,S0***826,Kent Library 102,MFA not working,Account/Access,Closed,3.1,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0242,10/11/2023,13:41,S0***804,Academic Hall 110,Email access denied,Account/Access,Closed,4.0,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0243,09/08/2023,14:43,S0***439,Kent Library 102,Browser freezing,Software,Closed,1.8,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0244,10/23/2023,14:08,S0***176,Academic Hall 110,Password reset,Account/Access,Closed,5.9,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0245,09/22/2023,15:16,S0***126,Carnahan Hall 214,WiFi authentication failed,Network,Closed,1.2,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0246,11/09/2023,10:29,S0***784,Academic Hall 110,Slow network speed,Network,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0247,11/13/2023,16:59,S0***262,Academic Hall 110,MFA not working,Account/Access,Closed,5.4,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0248,09/04/2023,15:57,S0***397,Kent Library 102,Slow network speed,Network,Closed,1.0,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0249,08/25/2023,12:08,S0***634,Academic Hall 110,Password reset,Account/Access,Closed,2.0,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0250,11/20/2023,08:52,S0***084,Kent Library 102,Software install failed,Software,Closed,4.2,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0251,10/16/2023,14:31,S0***524,Carnahan Hall 214,Monitor no signal,Hardware,Closed,1.6,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0252,10/16/2023,12:01,S0***401,Show Me Center Lab,Browser freezing,Software,Closed,1.0,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0253,09/18/2023,12:54,S0***822,Kent Library 102,Email access denied,Account/Access,Closed,3.3,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0254,10/03/2023,11:07,S0***569,Carnahan Hall 214,Application crashing,Software,In Progress,3.2,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0255,10/03/2023,14:27,S0***083,Kent Library 101,Browser freezing,Software,Closed,0.7,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0256,09/26/2023,15:41,S0***478,Kent Library 102,PC won't power on,Hardware,Closed,5.9,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0257,09/22/2023,13:19,S0***529,Show Me Center Lab,Printer not connecting,Hardware,In Progress,3.9,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-0258,09/06/2023,12:01,S0***683,Carnahan Hall 214,Canvas login loop,Account/Access,Closed,4.2,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0259,11/10/2023,14:48,S0***049,Academic Hall 110,Slow network speed,Network,Closed,4.3,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0260,11/03/2023,15:42,S0***407,Academic Hall 110,Room booking question,Other,Closed,2.4,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0261,09/20/2023,13:19,S0***199,Show Me Center Lab,Lab equipment request,Other,In Progress,3.3,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-0262,09/22/2023,14:50,S0***538,Academic Hall 110,Mouse not working,Hardware,Closed,1.5,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0263,09/29/2023,13:53,S0***200,Kent Library 102,Mouse not working,Hardware,Closed,5.6,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0264,10/06/2023,12:55,S0***632,Kent Library 101,Password reset,Account/Access,Closed,2.3,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0265,09/25/2023,11:22,S0***943,Carnahan Hall 214,Room booking question,Other,Closed,0.9,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0266,11/02/2023,14:24,S0***911,Show Me Center Lab,SSO failure,Account/Access,Closed,1.1,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0267,09/18/2023,15:23,S0***982,Carnahan Hall 214,Driver conflict,Software,Closed,3.5,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0268,10/09/2023,10:58,S0***659,Kent Library 101,PC won't power on,Hardware,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0269,10/12/2023,12:37,S0***590,Kent Library 102,General IT inquiry,Other,Closed,2.3,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0270,09/11/2023,10:10,S0***401,Kent Library 101,Browser freezing,Software,Closed,5.0,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0271,09/11/2023,11:09,S0***869,Kent Library 102,License activation error,Software,Closed,3.1,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0272,09/04/2023,09:54,S0***440,Academic Hall 110,Furniture issue,Other,Closed,2.3,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0273,10/20/2023,08:04,S0***223,Academic Hall 110,Software install failed,Software,Closed,5.8,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0274,10/26/2023,13:24,S0***996,Show Me Center Lab,MFA not working,Account/Access,Closed,3.8,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0275,09/28/2023,10:08,S0***206,Carnahan Hall 214,General IT inquiry,Other,In Progress,4.4,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0276,09/19/2023,09:08,S0***962,Kent Library 102,Furniture issue,Other,Closed,1.4,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0277,10/18/2023,13:42,S0***041,Show Me Center Lab,PC won't power on,Hardware,Closed,5.9,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0278,11/17/2023,11:56,S0***889,Carnahan Hall 214,SSO failure,Account/Access,Closed,3.1,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0279,11/01/2023,09:57,S0***455,Show Me Center Lab,Lab equipment request,Other,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0280,11/06/2023,12:11,S0***164,Academic Hall 110,DNS resolution error,Network,Closed,1.4,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0281,10/05/2023,11:17,S0***420,Kent Library 101,General IT inquiry,Other,In Progress,2.0,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-0282,09/26/2023,13:46,S0***999,Carnahan Hall 214,USB device not recognized,Hardware,Closed,4.2,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0283,09/05/2023,08:46,S0***347,Kent Library 102,Canvas login loop,Account/Access,In Progress,3.4,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0284,09/13/2023,09:23,S0***575,Kent Library 102,IP conflict detected,Network,Closed,2.6,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0285,08/30/2023,12:27,S0***459,Kent Library 101,USB device not recognized,Hardware,Closed,4.2,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0286,11/07/2023,14:59,S0***447,Kent Library 102,No internet connection,Network,Closed,1.6,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0287,11/13/2023,08:19,S0***646,Carnahan Hall 214,No internet connection,Network,Closed,1.7,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0288,11/08/2023,15:50,S0***806,Kent Library 102,Canvas login loop,Account/Access,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0289,11/17/2023,12:04,S0***533,Kent Library 101,IP conflict detected,Network,Closed,0.5,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0290,11/13/2023,08:34,S0***918,Carnahan Hall 214,Account locked out,Account/Access,Closed,2.7,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0291,10/16/2023,10:22,S0***405,Kent Library 101,VPN not connecting,Network,Closed,5.2,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0292,09/27/2023,13:48,S0***105,Show Me Center Lab,SSO failure,Account/Access,Closed,4.0,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0293,11/17/2023,09:14,S0***795,Kent Library 101,USB device not recognized,Hardware,Closed,3.8,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0294,08/23/2023,08:36,S0***921,Carnahan Hall 214,USB device not recognized,Hardware,In Progress,1.2,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-0295,11/03/2023,16:26,S0***593,Carnahan Hall 214,Browser freezing,Software,Closed,0.9,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0296,09/08/2023,08:41,S0***590,Kent Library 102,Lab equipment request,Other,Closed,5.0,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-0297,10/04/2023,12:09,S0***354,Kent Library 102,Lab equipment request,Other,Closed,1.0,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0298,10/30/2023,16:35,S0***998,Kent Library 101,Furniture issue,Other,In Progress,4.6,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0299,09/07/2023,08:29,S0***299,Kent Library 102,Printer not connecting,Hardware,Closed,3.8,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0300,10/09/2023,12:34,S0***703,Academic Hall 110,Room booking question,Other,Closed,3.6,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0301,11/09/2023,09:48,S0***320,Kent Library 101,Mouse not working,Hardware,In Progress,3.8,M. Patel,Escalated to senior tech for further diagnosis.
+TKT-F23-0302,10/05/2023,15:14,S0***927,Academic Hall 110,Lab equipment request,Other,Closed,3.6,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0303,11/02/2023,11:28,S0***970,Academic Hall 110,VPN not connecting,Network,Closed,0.9,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0304,10/23/2023,10:41,S0***258,Academic Hall 110,OS update loop,Software,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0305,09/27/2023,14:04,S0***162,Kent Library 102,No internet connection,Network,Closed,2.4,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0306,08/21/2023,15:54,S0***278,Carnahan Hall 214,WiFi authentication failed,Network,Closed,4.6,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0307,10/25/2023,15:46,S0***385,Show Me Center Lab,Furniture issue,Other,Closed,4.4,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0308,11/16/2023,12:15,S0***928,Kent Library 101,Lab equipment request,Other,Closed,1.3,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0309,10/16/2023,10:34,S0***017,Show Me Center Lab,Mouse not working,Hardware,Closed,5.4,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0310,09/12/2023,15:20,S0***430,Kent Library 102,Email access denied,Account/Access,Closed,4.3,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0311,10/30/2023,10:00,S0***610,Carnahan Hall 214,Room booking question,Other,Closed,0.8,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0312,08/23/2023,12:00,S0***671,Kent Library 101,General IT inquiry,Other,Closed,4.2,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0313,10/30/2023,10:30,S0***390,Kent Library 102,Mouse not working,Hardware,Closed,3.4,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0314,10/02/2023,14:53,S0***475,Carnahan Hall 214,License activation error,Software,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0315,08/21/2023,15:24,S0***388,Kent Library 102,MFA not working,Account/Access,Closed,2.6,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0316,11/17/2023,15:50,S0***069,Kent Library 102,Room booking question,Other,Closed,1.5,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0317,10/04/2023,13:26,S0***630,Show Me Center Lab,Slow network speed,Network,Closed,0.8,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0318,09/18/2023,13:22,S0***849,Carnahan Hall 214,VPN not connecting,Network,Closed,6.0,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0319,11/15/2023,09:00,S0***169,Carnahan Hall 214,USB device not recognized,Hardware,Closed,0.9,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0320,08/28/2023,14:59,S0***702,Academic Hall 110,Application crashing,Software,Closed,5.1,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0321,10/23/2023,16:02,S0***226,Academic Hall 110,MFA not working,Account/Access,Closed,3.4,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0322,11/07/2023,09:23,S0***185,Academic Hall 110,Slow network speed,Network,Closed,4.6,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0323,09/04/2023,12:56,S0***690,Academic Hall 110,Mouse not working,Hardware,Closed,5.7,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0324,10/30/2023,11:58,S0***520,Kent Library 102,General IT inquiry,Other,Closed,3.6,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0325,09/18/2023,12:35,S0***118,Kent Library 101,Furniture issue,Other,Closed,4.7,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0326,09/13/2023,11:54,S0***596,Kent Library 101,No internet connection,Network,Closed,5.6,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0327,08/25/2023,13:45,S0***731,Kent Library 101,Canvas login loop,Account/Access,Closed,4.2,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0328,11/06/2023,14:10,S0***967,Show Me Center Lab,Room booking question,Other,Closed,4.6,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0329,08/22/2023,09:27,S0***417,Kent Library 102,Canvas login loop,Account/Access,Closed,2.5,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0330,09/06/2023,08:59,S0***858,Kent Library 101,General IT inquiry,Other,Closed,2.9,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0331,08/29/2023,12:43,S0***734,Kent Library 101,PC won't power on,Hardware,Closed,1.8,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0332,11/20/2023,10:09,S0***156,Academic Hall 110,SSO failure,Account/Access,Closed,5.3,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0333,10/26/2023,11:15,S0***901,Show Me Center Lab,Room booking question,Other,Closed,3.1,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0334,10/16/2023,10:49,S0***417,Kent Library 101,MFA not working,Account/Access,Closed,5.1,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0335,10/30/2023,10:36,S0***810,Show Me Center Lab,Furniture issue,Other,Closed,0.6,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0336,09/14/2023,10:07,S0***863,Show Me Center Lab,Application crashing,Software,Closed,2.2,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0337,11/20/2023,15:03,S0***016,Kent Library 102,Lab equipment request,Other,Closed,1.2,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0338,11/13/2023,15:23,S0***383,Kent Library 101,Lab equipment request,Other,Closed,2.6,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0339,09/26/2023,09:11,S0***740,Kent Library 102,Account locked out,Account/Access,Closed,3.7,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0340,11/02/2023,12:00,S0***532,Kent Library 101,MFA not working,Account/Access,In Progress,3.8,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0341,08/25/2023,12:05,S0***871,Carnahan Hall 214,Printer not connecting,Hardware,Closed,3.5,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0342,10/23/2023,14:01,S0***534,Carnahan Hall 214,Account locked out,Account/Access,Closed,5.2,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0343,10/18/2023,09:16,S0***965,Kent Library 102,Printer not connecting,Hardware,Closed,1.3,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0344,10/27/2023,15:17,S0***276,Academic Hall 110,WiFi authentication failed,Network,In Progress,1.4,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-0345,10/25/2023,11:13,S0***244,Show Me Center Lab,Lab equipment request,Other,Closed,4.3,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0346,08/30/2023,08:25,S0***314,Kent Library 102,Slow network speed,Network,Closed,0.6,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0347,10/11/2023,12:33,S0***598,Show Me Center Lab,Application crashing,Software,In Progress,3.4,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0348,08/29/2023,16:21,S0***872,Kent Library 102,SSO failure,Account/Access,Closed,4.4,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0349,10/27/2023,08:02,S0***581,Show Me Center Lab,VPN not connecting,Network,In Progress,4.6,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0350,08/30/2023,16:30,S0***836,Kent Library 102,License activation error,Software,Closed,4.3,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0351,09/25/2023,16:00,S0***415,Kent Library 102,Room booking question,Other,In Progress,2.9,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0352,09/04/2023,13:42,S0***763,Kent Library 101,WiFi authentication failed,Network,Closed,2.8,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0353,11/15/2023,15:41,S0***992,Show Me Center Lab,Keyboard unresponsive,Hardware,In Progress,4.6,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0354,09/04/2023,15:47,S0***540,Academic Hall 110,Mouse not working,Hardware,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0355,08/22/2023,16:23,S0***295,Academic Hall 110,USB device not recognized,Hardware,Closed,3.4,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0356,11/09/2023,14:50,S0***374,Academic Hall 110,Account locked out,Account/Access,In Progress,4.6,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0357,08/31/2023,08:17,S0***514,Carnahan Hall 214,OS update loop,Software,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0358,10/31/2023,09:39,S0***788,Kent Library 102,Room booking question,Other,In Progress,2.0,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0359,09/18/2023,12:52,S0***498,Carnahan Hall 214,No internet connection,Network,Closed,2.2,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0360,09/07/2023,09:32,S0***753,Show Me Center Lab,General IT inquiry,Other,Closed,3.8,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0361,10/19/2023,14:54,S0***332,Show Me Center Lab,SSO failure,Account/Access,Closed,3.7,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0362,09/18/2023,13:08,S0***681,Carnahan Hall 214,USB device not recognized,Hardware,Closed,2.7,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0363,10/16/2023,14:18,S0***908,Carnahan Hall 214,Browser freezing,Software,In Progress,2.6,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-0364,08/22/2023,09:15,S0***793,Academic Hall 110,Slow network speed,Network,In Progress,2.0,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-0365,10/20/2023,16:01,S0***211,Show Me Center Lab,Canvas login loop,Account/Access,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0366,10/20/2023,16:13,S0***291,Academic Hall 110,General IT inquiry,Other,Closed,3.3,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0367,10/30/2023,12:13,S0***139,Carnahan Hall 214,Browser freezing,Software,Closed,4.7,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0368,09/19/2023,16:59,S0***867,Carnahan Hall 214,USB device not recognized,Hardware,Closed,0.6,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0369,11/03/2023,14:22,S0***252,Kent Library 102,Furniture issue,Other,Closed,5.9,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0370,09/26/2023,13:24,S0***739,Academic Hall 110,SSO failure,Account/Access,Closed,2.3,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0371,09/29/2023,15:23,S0***438,Show Me Center Lab,Keyboard unresponsive,Hardware,Closed,2.3,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0372,10/10/2023,12:42,S0***128,Show Me Center Lab,Furniture issue,Other,Closed,5.2,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0373,10/05/2023,16:18,S0***254,Kent Library 101,General IT inquiry,Other,In Progress,1.7,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0374,10/06/2023,14:41,S0***710,Kent Library 101,OS update loop,Software,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0375,09/25/2023,12:01,S0***696,Kent Library 101,Room booking question,Other,Closed,1.8,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0376,09/06/2023,13:06,S0***896,Kent Library 101,VPN not connecting,Network,Closed,0.5,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0377,11/13/2023,09:22,S0***087,Kent Library 101,Slow network speed,Network,Closed,1.2,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0378,09/15/2023,08:43,S0***712,Carnahan Hall 214,Application crashing,Software,Closed,5.3,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0379,10/10/2023,11:42,S0***884,Kent Library 102,Password reset,Account/Access,Closed,2.7,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0380,10/16/2023,16:16,S0***381,Kent Library 102,License activation error,Software,Closed,4.8,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0381,10/23/2023,08:13,S0***645,Carnahan Hall 214,Email access denied,Account/Access,In Progress,4.5,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-0382,11/17/2023,10:18,S0***789,Academic Hall 110,Keyboard unresponsive,Hardware,Closed,4.3,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0383,10/09/2023,11:02,S0***592,Show Me Center Lab,Furniture issue,Other,In Progress,3.1,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-0384,09/11/2023,16:06,S0***495,Kent Library 101,Canvas login loop,Account/Access,Closed,5.0,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0385,08/23/2023,16:29,S0***612,Carnahan Hall 214,Email access denied,Account/Access,Closed,2.9,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0386,09/18/2023,09:14,S0***719,Kent Library 102,Password reset,Account/Access,Closed,5.7,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0387,09/28/2023,11:57,S0***261,Carnahan Hall 214,MFA not working,Account/Access,Closed,2.1,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-0388,09/18/2023,08:49,S0***350,Kent Library 102,Printer not connecting,Hardware,Closed,1.9,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0389,10/04/2023,15:28,S0***763,Show Me Center Lab,Software install failed,Software,In Progress,3.4,M. Patel,Escalated to senior tech for further diagnosis.
+TKT-F23-0390,11/13/2023,15:21,S0***944,Carnahan Hall 214,Slow network speed,Network,Closed,5.3,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0391,09/25/2023,08:55,S0***005,Kent Library 102,Slow network speed,Network,Closed,4.4,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0392,10/23/2023,08:19,S0***724,Kent Library 101,DNS resolution error,Network,Closed,1.1,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0393,09/14/2023,16:54,S0***544,Show Me Center Lab,DNS resolution error,Network,Closed,1.2,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0394,11/07/2023,12:20,S0***577,Kent Library 101,Password reset,Account/Access,Closed,2.5,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0395,09/29/2023,09:21,S0***402,Carnahan Hall 214,WiFi authentication failed,Network,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0396,11/06/2023,08:21,S0***635,Academic Hall 110,Keyboard unresponsive,Hardware,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0397,10/04/2023,10:17,S0***178,Academic Hall 110,PC won't power on,Hardware,Closed,1.5,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0398,11/10/2023,14:21,S0***266,Kent Library 102,Printer not connecting,Hardware,Closed,4.2,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0399,09/14/2023,08:52,S0***680,Show Me Center Lab,IP conflict detected,Network,Closed,1.7,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0400,10/10/2023,10:17,S0***861,Carnahan Hall 214,Slow network speed,Network,Closed,2.4,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0401,10/10/2023,11:02,S0***922,Academic Hall 110,Monitor no signal,Hardware,In Progress,3.8,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-0402,08/24/2023,15:17,S0***640,Show Me Center Lab,Monitor no signal,Hardware,Closed,2.2,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0403,10/04/2023,08:24,S0***460,Kent Library 101,Keyboard unresponsive,Hardware,Closed,1.6,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0404,10/16/2023,11:02,S0***494,Kent Library 101,Furniture issue,Other,Closed,5.7,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0405,09/25/2023,13:54,S0***319,Show Me Center Lab,Lab equipment request,Other,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0406,10/09/2023,15:58,S0***880,Academic Hall 110,Browser freezing,Software,Closed,3.7,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0407,08/29/2023,13:39,S0***099,Carnahan Hall 214,Lab equipment request,Other,Closed,2.0,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0408,10/03/2023,16:02,S0***419,Kent Library 102,Software install failed,Software,Closed,1.0,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0409,09/22/2023,10:46,S0***952,Carnahan Hall 214,VPN not connecting,Network,In Progress,3.5,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-0410,10/26/2023,09:33,S0***476,Kent Library 101,License activation error,Software,In Progress,1.2,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-0411,10/18/2023,09:40,S0***435,Academic Hall 110,Keyboard unresponsive,Hardware,Closed,0.6,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0412,10/23/2023,10:58,S0***940,Show Me Center Lab,VPN not connecting,Network,Closed,5.8,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0413,08/24/2023,16:44,S0***770,Academic Hall 110,Lab equipment request,Other,Closed,2.3,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0414,09/20/2023,14:07,S0***368,Kent Library 102,Canvas login loop,Account/Access,Closed,2.1,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0415,08/24/2023,12:11,S0***845,Kent Library 101,General IT inquiry,Other,Closed,1.6,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0416,10/13/2023,11:47,S0***893,Show Me Center Lab,Printer not connecting,Hardware,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0417,11/17/2023,09:14,S0***015,Carnahan Hall 214,General IT inquiry,Other,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0418,09/08/2023,11:02,S0***335,Kent Library 102,DNS resolution error,Network,Closed,4.1,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0419,10/16/2023,13:57,S0***868,Academic Hall 110,Monitor no signal,Hardware,Closed,4.4,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0420,09/06/2023,09:37,S0***393,Academic Hall 110,OS update loop,Software,Closed,2.4,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0421,11/15/2023,10:15,S0***351,Carnahan Hall 214,SSO failure,Account/Access,Closed,1.4,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0422,10/06/2023,10:45,S0***857,Show Me Center Lab,Email access denied,Account/Access,Closed,4.0,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0423,08/28/2023,11:23,S0***687,Kent Library 101,Software install failed,Software,Closed,1.6,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0424,09/11/2023,11:17,S0***285,Carnahan Hall 214,USB device not recognized,Hardware,Closed,0.6,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0425,10/02/2023,08:33,S0***763,Academic Hall 110,SSO failure,Account/Access,Closed,3.0,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0426,09/08/2023,11:00,S0***897,Academic Hall 110,USB device not recognized,Hardware,Closed,1.3,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0427,10/16/2023,12:42,S0***134,Academic Hall 110,Room booking question,Other,Closed,5.0,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0428,08/25/2023,13:55,S0***584,Academic Hall 110,Lab equipment request,Other,Closed,4.5,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0429,09/04/2023,14:05,S0***024,Show Me Center Lab,PC won't power on,Hardware,Closed,4.6,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0430,10/23/2023,08:05,S0***220,Kent Library 101,Canvas login loop,Account/Access,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0431,09/25/2023,15:30,S0***856,Kent Library 101,IP conflict detected,Network,Closed,1.8,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0432,09/11/2023,12:57,S0***592,Kent Library 101,Mouse not working,Hardware,Closed,2.4,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0433,11/13/2023,08:46,S0***542,Academic Hall 110,Keyboard unresponsive,Hardware,Closed,3.4,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0434,09/04/2023,12:21,S0***483,Kent Library 102,Email access denied,Account/Access,Closed,4.0,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0435,10/13/2023,16:37,S0***859,Kent Library 102,Lab equipment request,Other,Closed,5.9,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0436,10/09/2023,10:06,S0***780,Show Me Center Lab,Monitor no signal,Hardware,Closed,4.1,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0437,11/02/2023,12:44,S0***027,Carnahan Hall 214,Browser freezing,Software,Closed,4.8,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0438,10/26/2023,15:21,S0***042,Carnahan Hall 214,MFA not working,Account/Access,Closed,1.6,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0439,09/28/2023,16:41,S0***936,Academic Hall 110,General IT inquiry,Other,In Progress,4.7,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0440,11/17/2023,11:14,S0***487,Carnahan Hall 214,Room booking question,Other,Closed,2.0,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0441,09/11/2023,16:43,S0***141,Kent Library 101,WiFi authentication failed,Network,Closed,3.9,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0442,09/08/2023,13:05,S0***008,Carnahan Hall 214,Lab equipment request,Other,Closed,5.5,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0443,09/11/2023,16:25,S0***865,Academic Hall 110,General IT inquiry,Other,Closed,4.1,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0444,10/23/2023,15:17,S0***157,Kent Library 101,WiFi authentication failed,Network,Closed,5.0,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0445,10/02/2023,15:54,S0***996,Show Me Center Lab,Furniture issue,Other,Closed,1.6,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0446,09/04/2023,13:53,S0***159,Kent Library 101,USB device not recognized,Hardware,In Progress,3.2,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0447,10/18/2023,08:41,S0***090,Academic Hall 110,DNS resolution error,Network,In Progress,2.5,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0448,10/30/2023,10:44,S0***901,Kent Library 101,WiFi authentication failed,Network,Closed,2.6,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0449,09/18/2023,16:12,S0***369,Academic Hall 110,Furniture issue,Other,Closed,3.4,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0450,10/25/2023,09:27,S0***940,Academic Hall 110,General IT inquiry,Other,Closed,5.3,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0451,10/25/2023,13:08,S0***723,Carnahan Hall 214,Lab equipment request,Other,In Progress,1.1,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0452,09/18/2023,13:58,S0***497,Show Me Center Lab,General IT inquiry,Other,Closed,1.4,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0453,10/04/2023,15:12,S0***705,Academic Hall 110,DNS resolution error,Network,Closed,5.5,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0454,11/09/2023,09:42,S0***461,Kent Library 102,Mouse not working,Hardware,Closed,4.5,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0455,10/23/2023,09:45,S0***540,Kent Library 101,SSO failure,Account/Access,In Progress,1.2,R. Chen,Awaiting replacement part from IT supply room.
+TKT-F23-0456,10/09/2023,12:29,S0***388,Carnahan Hall 214,Furniture issue,Other,Closed,0.7,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0457,11/06/2023,14:01,S0***116,Kent Library 101,No internet connection,Network,Closed,0.8,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0458,08/30/2023,10:09,S0***501,Academic Hall 110,Room booking question,Other,Closed,4.7,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0459,09/29/2023,15:55,S0***989,Kent Library 101,DNS resolution error,Network,In Progress,4.4,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-0460,09/11/2023,15:39,S0***688,Show Me Center Lab,WiFi authentication failed,Network,Closed,3.9,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0461,08/28/2023,11:44,S0***379,Carnahan Hall 214,Driver conflict,Software,Closed,5.4,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0462,10/30/2023,12:05,S0***504,Carnahan Hall 214,Lab equipment request,Other,Closed,5.8,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0463,10/09/2023,08:13,S0***177,Carnahan Hall 214,PC won't power on,Hardware,Closed,5.8,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0464,09/11/2023,08:06,S0***172,Carnahan Hall 214,Printer not connecting,Hardware,Closed,0.6,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0465,09/04/2023,15:32,S0***937,Kent Library 101,Canvas login loop,Account/Access,Closed,5.6,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0466,09/28/2023,16:16,S0***582,Kent Library 101,Canvas login loop,Account/Access,Closed,4.4,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0467,09/04/2023,08:49,S0***883,Carnahan Hall 214,Printer not connecting,Hardware,Closed,4.4,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0468,09/01/2023,14:52,S0***287,Show Me Center Lab,SSO failure,Account/Access,Closed,2.3,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0469,09/29/2023,08:25,S0***903,Academic Hall 110,SSO failure,Account/Access,Closed,2.9,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0470,09/22/2023,14:29,S0***510,Kent Library 101,Lab equipment request,Other,Closed,3.7,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0471,09/18/2023,13:41,S0***040,Academic Hall 110,USB device not recognized,Hardware,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0472,08/28/2023,09:04,S0***841,Carnahan Hall 214,Driver conflict,Software,Closed,3.6,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0473,10/04/2023,12:53,S0***746,Show Me Center Lab,SSO failure,Account/Access,Closed,3.8,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0474,08/28/2023,10:00,S0***862,Show Me Center Lab,IP conflict detected,Network,Closed,5.9,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0475,08/28/2023,09:31,S0***969,Kent Library 102,Driver conflict,Software,Closed,1.8,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0476,11/16/2023,09:59,S0***512,Kent Library 102,General IT inquiry,Other,Closed,2.2,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0477,10/13/2023,13:36,S0***600,Academic Hall 110,Monitor no signal,Hardware,Closed,0.7,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0478,10/09/2023,09:00,S0***013,Academic Hall 110,Printer not connecting,Hardware,Closed,1.3,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0479,10/23/2023,15:38,S0***194,Show Me Center Lab,Furniture issue,Other,Closed,1.3,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0480,11/13/2023,15:57,S0***255,Kent Library 101,Password reset,Account/Access,Closed,4.5,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0481,11/15/2023,12:05,S0***974,Show Me Center Lab,WiFi authentication failed,Network,Closed,5.4,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0482,09/18/2023,10:26,S0***794,Academic Hall 110,Software install failed,Software,Closed,4.1,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0483,10/17/2023,13:37,S0***827,Kent Library 101,Driver conflict,Software,Closed,4.1,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0484,11/16/2023,16:22,S0***850,Kent Library 102,Email access denied,Account/Access,Closed,0.7,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0485,09/20/2023,15:57,S0***310,Kent Library 101,Application crashing,Software,Closed,3.0,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0486,09/19/2023,12:12,S0***315,Kent Library 101,Application crashing,Software,In Progress,2.5,R. Chen,Awaiting replacement part from IT supply room.
+TKT-F23-0487,09/04/2023,08:26,S0***645,Kent Library 102,MFA not working,Account/Access,Closed,1.6,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0488,09/26/2023,11:46,S0***743,Kent Library 102,General IT inquiry,Other,Closed,1.1,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0489,10/11/2023,08:17,S0***720,Kent Library 101,USB device not recognized,Hardware,Closed,3.1,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0490,08/28/2023,11:51,S0***356,Kent Library 102,Email access denied,Account/Access,Closed,5.6,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0491,08/28/2023,10:28,S0***093,Carnahan Hall 214,No internet connection,Network,Closed,1.6,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0492,11/14/2023,15:27,S0***043,Kent Library 102,IP conflict detected,Network,Closed,3.5,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0493,09/19/2023,12:12,S0***983,Academic Hall 110,WiFi authentication failed,Network,Closed,5.1,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0494,11/14/2023,08:38,S0***359,Kent Library 101,Email access denied,Account/Access,Closed,2.3,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0495,08/24/2023,13:17,S0***280,Show Me Center Lab,Printer not connecting,Hardware,Closed,1.5,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0496,10/04/2023,16:06,S0***550,Kent Library 101,Slow network speed,Network,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0497,08/28/2023,13:33,S0***001,Show Me Center Lab,Lab equipment request,Other,Closed,3.8,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0498,10/09/2023,11:44,S0***441,Show Me Center Lab,License activation error,Software,Closed,5.8,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0499,08/29/2023,09:26,S0***317,Carnahan Hall 214,USB device not recognized,Hardware,Closed,2.7,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0500,11/16/2023,13:10,S0***739,Kent Library 102,Account locked out,Account/Access,In Progress,1.1,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0501,08/21/2023,14:55,S0***485,Kent Library 102,Driver conflict,Software,Closed,5.5,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0502,10/09/2023,16:27,S0***000,Kent Library 102,Password reset,Account/Access,In Progress,4.7,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-0503,10/19/2023,12:33,S0***394,Academic Hall 110,General IT inquiry,Other,Closed,0.9,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0504,10/02/2023,12:42,S0***445,Kent Library 101,MFA not working,Account/Access,Closed,4.2,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0505,11/03/2023,10:36,S0***599,Carnahan Hall 214,Email access denied,Account/Access,Closed,1.2,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0506,10/26/2023,16:15,S0***966,Kent Library 101,Account locked out,Account/Access,Closed,2.4,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0507,10/06/2023,10:41,S0***323,Show Me Center Lab,Furniture issue,Other,Closed,5.2,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0508,10/10/2023,16:29,S0***116,Kent Library 101,No internet connection,Network,Closed,3.9,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0509,10/30/2023,13:52,S0***454,Carnahan Hall 214,Furniture issue,Other,Closed,2.9,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0510,10/24/2023,14:26,S0***118,Show Me Center Lab,Furniture issue,Other,Closed,0.7,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0511,09/18/2023,12:39,S0***548,Kent Library 101,Room booking question,Other,Closed,5.8,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0512,09/25/2023,15:58,S0***859,Academic Hall 110,License activation error,Software,Closed,5.4,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0513,10/20/2023,11:32,S0***828,Academic Hall 110,Lab equipment request,Other,In Progress,4.2,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-0514,10/23/2023,11:43,S0***898,Kent Library 101,Mouse not working,Hardware,In Progress,4.0,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-0515,08/31/2023,11:10,S0***182,Carnahan Hall 214,Monitor no signal,Hardware,Closed,2.3,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0516,11/15/2023,15:36,S0***455,Carnahan Hall 214,SSO failure,Account/Access,Closed,4.5,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0517,09/12/2023,10:15,S0***164,Kent Library 102,USB device not recognized,Hardware,Closed,3.7,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0518,10/12/2023,15:01,S0***419,Kent Library 101,Furniture issue,Other,Closed,2.3,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0519,09/04/2023,14:10,S0***999,Kent Library 102,Room booking question,Other,Closed,2.8,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0520,10/12/2023,14:51,S0***347,Show Me Center Lab,Keyboard unresponsive,Hardware,In Progress,1.0,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-0521,09/20/2023,13:08,S0***574,Kent Library 102,Account locked out,Account/Access,Closed,3.0,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0522,11/06/2023,13:52,S0***460,Show Me Center Lab,Room booking question,Other,Closed,2.8,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0523,09/15/2023,11:04,S0***447,Show Me Center Lab,General IT inquiry,Other,Closed,3.9,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0524,11/20/2023,12:04,S0***646,Show Me Center Lab,Slow network speed,Network,Closed,2.1,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0525,10/16/2023,16:15,S0***837,Show Me Center Lab,IP conflict detected,Network,Closed,2.3,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0526,11/13/2023,15:31,S0***463,Academic Hall 110,Monitor no signal,Hardware,Closed,0.5,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0527,08/30/2023,16:25,S0***635,Show Me Center Lab,DNS resolution error,Network,Closed,3.0,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0528,08/28/2023,12:54,S0***131,Carnahan Hall 214,Monitor no signal,Hardware,Closed,4.6,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0529,08/28/2023,12:46,S0***395,Show Me Center Lab,Browser freezing,Software,Closed,4.7,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0530,09/14/2023,13:46,S0***540,Kent Library 101,SSO failure,Account/Access,Closed,3.2,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0531,10/30/2023,14:25,S0***341,Show Me Center Lab,DNS resolution error,Network,Closed,1.9,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0532,09/21/2023,09:24,S0***245,Kent Library 101,Printer not connecting,Hardware,Closed,3.0,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0533,08/28/2023,08:42,S0***361,Kent Library 102,Monitor no signal,Hardware,Closed,6.0,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0534,09/14/2023,10:22,S0***469,Kent Library 101,Furniture issue,Other,Closed,2.8,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0535,09/18/2023,10:00,S0***998,Kent Library 102,Room booking question,Other,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0536,11/13/2023,08:54,S0***300,Kent Library 101,Password reset,Account/Access,Closed,2.4,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0537,11/16/2023,09:39,S0***703,Kent Library 102,License activation error,Software,Closed,5.9,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0538,11/16/2023,12:33,S0***320,Kent Library 102,Monitor no signal,Hardware,Closed,4.8,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0539,09/12/2023,16:39,S0***927,Show Me Center Lab,Account locked out,Account/Access,Closed,2.2,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0540,09/11/2023,09:33,S0***970,Kent Library 102,Lab equipment request,Other,Closed,3.2,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0541,10/30/2023,13:26,S0***558,Kent Library 102,No internet connection,Network,Closed,1.3,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0542,10/02/2023,09:55,S0***471,Carnahan Hall 214,Furniture issue,Other,Closed,0.6,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0543,09/12/2023,13:29,S0***153,Kent Library 102,SSO failure,Account/Access,In Progress,3.4,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-0544,11/10/2023,09:34,S0***713,Show Me Center Lab,IP conflict detected,Network,Closed,3.9,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0545,09/07/2023,11:18,S0***932,Kent Library 101,Room booking question,Other,Closed,0.7,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0546,10/17/2023,10:05,S0***017,Show Me Center Lab,Application crashing,Software,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0547,11/20/2023,16:45,S0***430,Kent Library 101,IP conflict detected,Network,In Progress,2.8,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-0548,09/07/2023,16:05,S0***610,Academic Hall 110,License activation error,Software,Closed,3.1,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0549,08/30/2023,16:45,S0***672,Kent Library 101,Lab equipment request,Other,In Progress,4.0,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0550,10/05/2023,11:55,S0***391,Academic Hall 110,General IT inquiry,Other,In Progress,2.1,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0551,11/08/2023,12:57,S0***210,Kent Library 102,Password reset,Account/Access,Closed,0.9,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0552,11/13/2023,15:30,S0***244,Kent Library 101,No internet connection,Network,Closed,4.6,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0553,10/16/2023,16:17,S0***267,Show Me Center Lab,Browser freezing,Software,Closed,3.3,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0554,11/20/2023,09:33,S0***726,Carnahan Hall 214,Furniture issue,Other,Closed,5.7,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0555,10/23/2023,15:10,S0***732,Kent Library 102,VPN not connecting,Network,Closed,3.6,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0556,11/07/2023,08:26,S0***061,Show Me Center Lab,License activation error,Software,Closed,4.6,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0557,09/04/2023,14:27,S0***702,Academic Hall 110,No internet connection,Network,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0558,10/02/2023,08:26,S0***527,Show Me Center Lab,License activation error,Software,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0559,09/15/2023,10:52,S0***588,Carnahan Hall 214,DNS resolution error,Network,Closed,4.7,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0560,11/07/2023,10:54,S0***307,Carnahan Hall 214,Account locked out,Account/Access,Closed,3.1,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0561,08/29/2023,12:27,S0***392,Academic Hall 110,Browser freezing,Software,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0562,08/23/2023,13:42,S0***305,Carnahan Hall 214,OS update loop,Software,Closed,1.8,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0563,10/09/2023,12:20,S0***985,Kent Library 101,Room booking question,Other,Closed,3.6,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0564,09/11/2023,15:47,S0***547,Show Me Center Lab,Account locked out,Account/Access,Closed,4.0,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0565,11/13/2023,08:15,S0***766,Kent Library 102,WiFi authentication failed,Network,Closed,2.9,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0566,08/28/2023,11:05,S0***085,Academic Hall 110,WiFi authentication failed,Network,In Progress,1.2,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-0567,09/27/2023,12:55,S0***619,Carnahan Hall 214,Keyboard unresponsive,Hardware,Closed,0.5,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0568,11/10/2023,16:30,S0***142,Kent Library 102,OS update loop,Software,Closed,3.5,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0569,10/13/2023,16:03,S0***101,Academic Hall 110,SSO failure,Account/Access,Closed,2.1,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0570,08/28/2023,15:28,S0***607,Kent Library 101,IP conflict detected,Network,Closed,4.3,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0571,10/09/2023,16:01,S0***437,Kent Library 102,Mouse not working,Hardware,Closed,1.4,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0572,10/16/2023,16:50,S0***077,Kent Library 101,MFA not working,Account/Access,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0573,10/04/2023,14:24,S0***101,Kent Library 101,Keyboard unresponsive,Hardware,Closed,0.9,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0574,10/16/2023,11:43,S0***560,Carnahan Hall 214,Browser freezing,Software,Closed,1.8,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0575,09/22/2023,14:44,S0***565,Carnahan Hall 214,Monitor no signal,Hardware,Closed,5.4,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0576,11/13/2023,08:43,S0***894,Kent Library 102,Monitor no signal,Hardware,Closed,3.1,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0577,11/13/2023,09:47,S0***992,Kent Library 101,Application crashing,Software,Closed,1.3,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0578,11/06/2023,13:04,S0***971,Show Me Center Lab,Mouse not working,Hardware,In Progress,2.0,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-0579,08/29/2023,13:23,S0***606,Carnahan Hall 214,IP conflict detected,Network,Closed,3.0,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0580,11/06/2023,10:45,S0***343,Carnahan Hall 214,Mouse not working,Hardware,Closed,3.2,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0581,10/02/2023,13:29,S0***292,Kent Library 101,Furniture issue,Other,Closed,3.7,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0582,10/16/2023,08:59,S0***232,Carnahan Hall 214,Slow network speed,Network,Closed,3.8,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0583,11/17/2023,11:10,S0***608,Carnahan Hall 214,DNS resolution error,Network,Closed,5.2,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0584,11/03/2023,13:34,S0***530,Show Me Center Lab,SSO failure,Account/Access,Closed,3.0,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0585,08/22/2023,14:07,S0***777,Carnahan Hall 214,Lab equipment request,Other,Closed,3.3,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0586,11/07/2023,08:39,S0***791,Kent Library 102,Mouse not working,Hardware,Closed,5.1,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0587,10/02/2023,08:53,S0***685,Show Me Center Lab,Keyboard unresponsive,Hardware,Closed,3.1,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0588,11/14/2023,12:22,S0***238,Kent Library 102,Printer not connecting,Hardware,Closed,4.5,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0589,08/31/2023,16:45,S0***891,Academic Hall 110,VPN not connecting,Network,In Progress,1.0,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0590,08/21/2023,12:03,S0***757,Academic Hall 110,Monitor no signal,Hardware,Closed,1.7,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0591,11/14/2023,14:18,S0***615,Kent Library 102,General IT inquiry,Other,Closed,5.3,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-0592,09/18/2023,13:05,S0***907,Carnahan Hall 214,Software install failed,Software,Closed,5.8,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0593,08/22/2023,12:37,S0***746,Academic Hall 110,Account locked out,Account/Access,Closed,1.9,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0594,10/16/2023,09:31,S0***909,Kent Library 102,MFA not working,Account/Access,Closed,3.3,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0595,08/23/2023,12:14,S0***840,Kent Library 101,USB device not recognized,Hardware,Closed,1.9,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0596,08/28/2023,14:12,S0***651,Kent Library 101,General IT inquiry,Other,In Progress,1.7,R. Chen,"User unavailable, follow-up scheduled."
+TKT-F23-0597,10/06/2023,10:35,S0***119,Academic Hall 110,Driver conflict,Software,Closed,1.8,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0598,11/06/2023,11:45,S0***704,Academic Hall 110,License activation error,Software,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0599,10/04/2023,14:43,S0***367,Academic Hall 110,Application crashing,Software,Closed,2.3,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0600,11/06/2023,10:41,S0***798,Academic Hall 110,Printer not connecting,Hardware,Closed,6.0,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0601,10/19/2023,11:45,S0***109,Kent Library 102,OS update loop,Software,Closed,4.2,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0602,10/23/2023,14:04,S0***078,Kent Library 101,Password reset,Account/Access,Closed,2.3,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0603,10/02/2023,11:00,S0***147,Kent Library 101,Canvas login loop,Account/Access,In Progress,1.2,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-0604,10/18/2023,09:12,S0***431,Kent Library 102,OS update loop,Software,Closed,2.5,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0605,09/11/2023,11:22,S0***757,Kent Library 101,Account locked out,Account/Access,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0606,10/04/2023,10:33,S0***567,Academic Hall 110,Email access denied,Account/Access,Closed,2.9,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0607,09/01/2023,11:48,S0***036,Show Me Center Lab,License activation error,Software,Closed,4.3,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0608,09/19/2023,14:30,S0***606,Carnahan Hall 214,Software install failed,Software,Closed,5.0,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0609,10/30/2023,15:18,S0***389,Carnahan Hall 214,Password reset,Account/Access,Closed,2.7,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0610,10/02/2023,11:54,S0***163,Academic Hall 110,MFA not working,Account/Access,Closed,4.1,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0611,09/28/2023,13:35,S0***372,Academic Hall 110,Keyboard unresponsive,Hardware,Closed,1.5,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0612,09/14/2023,15:12,S0***128,Show Me Center Lab,Monitor no signal,Hardware,Closed,2.9,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0613,09/07/2023,10:01,S0***208,Show Me Center Lab,Room booking question,Other,In Progress,4.5,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0614,11/02/2023,13:13,S0***056,Academic Hall 110,Account locked out,Account/Access,Closed,4.0,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0615,10/12/2023,14:50,S0***783,Academic Hall 110,Room booking question,Other,Closed,1.1,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0616,11/13/2023,13:45,S0***168,Show Me Center Lab,IP conflict detected,Network,Closed,5.6,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0617,08/24/2023,11:58,S0***655,Academic Hall 110,Password reset,Account/Access,Closed,4.9,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0618,09/14/2023,08:49,S0***355,Show Me Center Lab,Software install failed,Software,Closed,6.0,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0619,09/12/2023,08:41,S0***045,Show Me Center Lab,Monitor no signal,Hardware,Closed,2.6,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0620,10/25/2023,10:28,S0***171,Carnahan Hall 214,IP conflict detected,Network,Closed,1.8,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0621,11/13/2023,13:43,S0***843,Academic Hall 110,Printer not connecting,Hardware,Closed,4.3,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0622,10/26/2023,08:22,S0***839,Academic Hall 110,Driver conflict,Software,Closed,5.1,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0623,09/28/2023,08:15,S0***604,Carnahan Hall 214,MFA not working,Account/Access,Closed,3.4,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0624,09/04/2023,15:06,S0***248,Show Me Center Lab,Printer not connecting,Hardware,Closed,4.7,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0625,11/16/2023,11:26,S0***550,Kent Library 102,No internet connection,Network,Closed,5.3,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0626,10/27/2023,10:56,S0***953,Kent Library 102,Lab equipment request,Other,Closed,1.9,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0627,10/04/2023,10:34,S0***570,Kent Library 101,DNS resolution error,Network,Closed,5.0,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0628,10/09/2023,12:26,S0***178,Kent Library 101,Canvas login loop,Account/Access,Closed,1.0,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0629,09/12/2023,11:04,S0***219,Carnahan Hall 214,Password reset,Account/Access,Closed,0.6,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0630,10/10/2023,14:42,S0***809,Kent Library 102,General IT inquiry,Other,Closed,2.8,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0631,11/20/2023,16:57,S0***721,Kent Library 102,Mouse not working,Hardware,Closed,0.7,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0632,10/09/2023,09:16,S0***402,Academic Hall 110,Account locked out,Account/Access,Closed,2.6,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0633,11/13/2023,12:05,S0***963,Kent Library 101,OS update loop,Software,Closed,1.4,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0634,11/17/2023,11:35,S0***182,Kent Library 101,Slow network speed,Network,Closed,2.3,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0635,09/04/2023,08:06,S0***502,Show Me Center Lab,IP conflict detected,Network,Closed,5.7,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0636,09/07/2023,10:18,S0***680,Carnahan Hall 214,Lab equipment request,Other,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0637,11/17/2023,08:21,S0***861,Academic Hall 110,Furniture issue,Other,Closed,4.6,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0638,10/18/2023,14:46,S0***922,Academic Hall 110,PC won't power on,Hardware,Closed,4.8,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0639,10/31/2023,16:42,S0***640,Carnahan Hall 214,Furniture issue,Other,Closed,0.8,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0640,11/13/2023,14:29,S0***460,Carnahan Hall 214,WiFi authentication failed,Network,Closed,3.8,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0641,10/23/2023,15:47,S0***493,Kent Library 101,Mouse not working,Hardware,Closed,0.7,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0642,09/01/2023,14:19,S0***518,Carnahan Hall 214,WiFi authentication failed,Network,Closed,3.4,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0643,09/15/2023,14:20,S0***976,Academic Hall 110,General IT inquiry,Other,Closed,4.5,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0644,10/24/2023,08:42,S0***982,Carnahan Hall 214,License activation error,Software,Closed,1.0,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0645,10/18/2023,09:42,S0***311,Show Me Center Lab,Account locked out,Account/Access,Closed,0.6,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0646,10/23/2023,12:29,S0***410,Show Me Center Lab,Room booking question,Other,Closed,4.5,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0647,09/15/2023,16:07,S0***387,Academic Hall 110,WiFi authentication failed,Network,In Progress,3.1,R. Chen,Awaiting replacement part from IT supply room.
+TKT-F23-0648,11/10/2023,14:27,S0***022,Kent Library 101,PC won't power on,Hardware,Closed,1.0,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0649,10/23/2023,14:31,S0***759,Kent Library 101,Lab equipment request,Other,Closed,1.3,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0650,11/20/2023,09:37,S0***709,Carnahan Hall 214,Browser freezing,Software,Closed,5.6,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0651,10/04/2023,09:09,S0***649,Kent Library 101,Browser freezing,Software,Closed,2.3,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0652,11/09/2023,16:01,S0***025,Kent Library 101,Application crashing,Software,Closed,3.8,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0653,09/28/2023,09:47,S0***947,Kent Library 101,Keyboard unresponsive,Hardware,Closed,5.4,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0654,11/20/2023,08:22,S0***218,Show Me Center Lab,Account locked out,Account/Access,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0655,08/31/2023,15:43,S0***667,Show Me Center Lab,No internet connection,Network,Closed,5.9,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0656,10/24/2023,09:41,S0***326,Kent Library 102,PC won't power on,Hardware,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0657,09/08/2023,08:59,S0***304,Academic Hall 110,Room booking question,Other,Closed,2.0,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0658,08/21/2023,11:11,S0***938,Carnahan Hall 214,Email access denied,Account/Access,Closed,0.7,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0659,10/19/2023,12:46,S0***675,Kent Library 102,Keyboard unresponsive,Hardware,Closed,5.8,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0660,10/05/2023,15:04,S0***686,Academic Hall 110,PC won't power on,Hardware,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0661,10/17/2023,09:22,S0***285,Academic Hall 110,VPN not connecting,Network,Closed,2.9,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0662,10/09/2023,11:17,S0***762,Academic Hall 110,Furniture issue,Other,Closed,3.4,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0663,11/14/2023,12:25,S0***898,Carnahan Hall 214,Room booking question,Other,Closed,5.4,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0664,08/22/2023,10:46,S0***134,Kent Library 102,License activation error,Software,Closed,1.8,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0665,09/01/2023,16:40,S0***584,Academic Hall 110,USB device not recognized,Hardware,Closed,5.0,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0666,11/13/2023,15:29,S0***024,Kent Library 102,General IT inquiry,Other,Closed,3.2,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0667,08/29/2023,15:09,S0***901,Show Me Center Lab,Keyboard unresponsive,Hardware,Closed,3.6,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0668,11/13/2023,16:12,S0***856,Academic Hall 110,Email access denied,Account/Access,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0669,10/17/2023,10:01,S0***592,Carnahan Hall 214,Slow network speed,Network,Closed,4.7,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0670,08/21/2023,11:31,S0***543,Academic Hall 110,PC won't power on,Hardware,In Progress,3.4,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-0671,11/09/2023,12:46,S0***483,Academic Hall 110,IP conflict detected,Network,Closed,2.6,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0672,11/20/2023,13:42,S0***858,Show Me Center Lab,Driver conflict,Software,In Progress,2.5,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-0673,10/16/2023,13:51,S0***781,Show Me Center Lab,USB device not recognized,Hardware,Closed,4.6,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0674,10/10/2023,12:09,S0***027,Kent Library 102,USB device not recognized,Hardware,Closed,3.4,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0675,09/04/2023,13:25,S0***042,Academic Hall 110,Printer not connecting,Hardware,Closed,3.9,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0676,10/05/2023,10:25,S0***935,Kent Library 101,Furniture issue,Other,Closed,0.5,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0677,10/25/2023,12:39,S0***487,Kent Library 102,Email access denied,Account/Access,Closed,0.6,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0678,10/18/2023,14:47,S0***141,Show Me Center Lab,General IT inquiry,Other,Closed,0.7,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0679,09/15/2023,16:50,S0***985,Academic Hall 110,USB device not recognized,Hardware,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0680,08/28/2023,16:00,S0***459,Show Me Center Lab,Room booking question,Other,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0681,10/12/2023,14:05,S0***400,Academic Hall 110,MFA not working,Account/Access,In Progress,4.7,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-0682,10/10/2023,08:32,S0***775,Carnahan Hall 214,Browser freezing,Software,Closed,4.8,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0683,10/23/2023,15:52,S0***698,Kent Library 101,Account locked out,Account/Access,In Progress,3.6,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0684,11/06/2023,10:03,S0***943,Show Me Center Lab,General IT inquiry,Other,In Progress,3.6,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0685,09/15/2023,13:51,S0***958,Kent Library 102,MFA not working,Account/Access,Closed,3.8,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0686,09/05/2023,09:02,S0***853,Academic Hall 110,USB device not recognized,Hardware,Closed,3.3,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0687,10/13/2023,15:07,S0***404,Kent Library 102,Room booking question,Other,Closed,4.4,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0688,09/25/2023,10:47,S0***156,Kent Library 101,General IT inquiry,Other,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0689,11/06/2023,12:22,S0***902,Academic Hall 110,PC won't power on,Hardware,Closed,3.7,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0690,10/26/2023,11:56,S0***416,Kent Library 102,Room booking question,Other,Closed,5.7,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0691,11/08/2023,11:43,S0***810,Show Me Center Lab,Room booking question,Other,Closed,1.2,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0692,09/25/2023,11:14,S0***863,Show Me Center Lab,WiFi authentication failed,Network,Closed,2.9,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0693,08/30/2023,16:10,S0***016,Carnahan Hall 214,Lab equipment request,Other,Closed,1.9,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0694,08/24/2023,16:30,S0***383,Kent Library 101,Lab equipment request,Other,Closed,3.2,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0695,10/06/2023,10:18,S0***740,Carnahan Hall 214,Furniture issue,Other,Closed,4.4,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0696,11/13/2023,13:07,S0***532,Kent Library 102,Room booking question,Other,Closed,5.0,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0697,09/05/2023,13:12,S0***871,Show Me Center Lab,Application crashing,Software,Closed,4.1,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0698,11/02/2023,15:08,S0***534,Show Me Center Lab,Furniture issue,Other,Closed,5.8,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0699,10/30/2023,10:23,S0***965,Kent Library 102,Monitor no signal,Hardware,Closed,1.9,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0700,11/06/2023,16:24,S0***698,Academic Hall 110,MFA not working,Account/Access,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0701,10/23/2023,15:33,S0***991,Show Me Center Lab,Driver conflict,Software,Closed,3.4,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0702,09/11/2023,09:13,S0***829,Academic Hall 110,Slow network speed,Network,Closed,3.9,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0703,11/14/2023,14:35,S0***992,Kent Library 102,MFA not working,Account/Access,Closed,0.6,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0704,11/06/2023,09:06,S0***924,Carnahan Hall 214,DNS resolution error,Network,Closed,1.8,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0705,10/23/2023,15:12,S0***734,Carnahan Hall 214,USB device not recognized,Hardware,Closed,5.8,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0706,09/14/2023,09:04,S0***203,Kent Library 102,Canvas login loop,Account/Access,Closed,1.4,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0707,08/28/2023,12:02,S0***773,Academic Hall 110,Printer not connecting,Hardware,In Progress,4.6,M. Patel,Escalated to senior tech for further diagnosis.
+TKT-F23-0708,11/02/2023,10:46,S0***556,Kent Library 101,Room booking question,Other,Closed,4.7,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0709,09/29/2023,08:00,S0***331,Kent Library 102,Lab equipment request,Other,Closed,5.8,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0710,08/22/2023,10:57,S0***193,Kent Library 102,Lab equipment request,Other,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0711,11/15/2023,09:03,S0***161,Kent Library 101,No internet connection,Network,Closed,4.7,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0712,09/07/2023,08:47,S0***231,Carnahan Hall 214,General IT inquiry,Other,Closed,5.6,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0713,09/06/2023,10:07,S0***514,Carnahan Hall 214,VPN not connecting,Network,In Progress,1.3,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0714,11/13/2023,10:46,S0***840,Show Me Center Lab,Room booking question,Other,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0715,08/31/2023,11:34,S0***651,Kent Library 101,Room booking question,Other,Closed,1.7,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0716,11/09/2023,10:17,S0***119,Kent Library 101,Password reset,Account/Access,Closed,3.9,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0717,10/10/2023,14:47,S0***704,Academic Hall 110,PC won't power on,Hardware,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0718,11/07/2023,15:25,S0***367,Kent Library 101,Account locked out,Account/Access,Closed,4.3,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0719,10/09/2023,13:44,S0***798,Show Me Center Lab,Furniture issue,Other,Closed,4.4,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0720,10/23/2023,08:07,S0***109,Kent Library 102,License activation error,Software,Closed,4.4,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0721,08/28/2023,14:47,S0***077,Carnahan Hall 214,Printer not connecting,Hardware,In Progress,3.8,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0722,09/05/2023,15:02,S0***662,Kent Library 101,Software install failed,Software,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0723,08/21/2023,14:52,S0***825,Academic Hall 110,VPN not connecting,Network,Closed,4.6,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0724,10/16/2023,13:26,S0***757,Academic Hall 110,Printer not connecting,Hardware,Closed,4.3,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0725,10/09/2023,16:56,S0***568,Academic Hall 110,Furniture issue,Other,Closed,3.1,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0726,10/05/2023,11:31,S0***036,Kent Library 101,Canvas login loop,Account/Access,Closed,0.8,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0727,08/23/2023,08:33,S0***606,Kent Library 102,Room booking question,Other,Closed,3.4,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0728,11/02/2023,13:40,S0***389,Carnahan Hall 214,Email access denied,Account/Access,Closed,2.9,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0729,11/06/2023,11:37,S0***716,Kent Library 102,Keyboard unresponsive,Hardware,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0730,10/16/2023,09:59,S0***026,Carnahan Hall 214,SSO failure,Account/Access,In Progress,2.9,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-0731,09/06/2023,10:30,S0***741,Kent Library 102,No internet connection,Network,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0732,10/25/2023,09:33,S0***580,Kent Library 101,OS update loop,Software,Closed,3.9,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0733,08/24/2023,09:30,S0***742,Kent Library 102,Monitor no signal,Hardware,Closed,3.9,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0734,10/06/2023,10:36,S0***674,Academic Hall 110,Application crashing,Software,In Progress,2.7,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0735,11/15/2023,12:18,S0***485,Carnahan Hall 214,MFA not working,Account/Access,In Progress,3.9,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-0736,08/31/2023,12:44,S0***953,Academic Hall 110,Password reset,Account/Access,Closed,3.3,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0737,10/06/2023,10:18,S0***523,Academic Hall 110,Lab equipment request,Other,Closed,5.1,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0738,11/03/2023,14:37,S0***306,Academic Hall 110,Keyboard unresponsive,Hardware,Closed,2.1,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0739,08/23/2023,08:25,S0***080,Show Me Center Lab,Canvas login loop,Account/Access,Closed,0.8,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0740,09/07/2023,15:57,S0***289,Academic Hall 110,Software install failed,Software,Closed,4.8,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0741,11/10/2023,10:06,S0***045,Carnahan Hall 214,Printer not connecting,Hardware,Closed,5.4,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0742,09/21/2023,12:07,S0***124,Kent Library 101,WiFi authentication failed,Network,Closed,5.2,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0743,09/04/2023,12:10,S0***972,Carnahan Hall 214,VPN not connecting,Network,Closed,5.0,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0744,10/31/2023,14:20,S0***539,Kent Library 102,No internet connection,Network,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0745,08/29/2023,14:30,S0***401,Kent Library 101,Slow network speed,Network,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0746,10/26/2023,13:58,S0***869,Show Me Center Lab,Canvas login loop,Account/Access,Closed,5.7,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0747,11/20/2023,13:03,S0***439,Show Me Center Lab,SSO failure,Account/Access,Closed,1.3,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0748,11/03/2023,15:34,S0***223,Kent Library 101,DNS resolution error,Network,In Progress,1.5,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-0749,09/11/2023,14:14,S0***997,Kent Library 101,Browser freezing,Software,Closed,1.0,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0750,09/12/2023,14:17,S0***859,Academic Hall 110,Furniture issue,Other,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0751,09/27/2023,12:57,S0***828,Carnahan Hall 214,Password reset,Account/Access,Closed,3.5,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0752,08/29/2023,09:48,S0***413,Kent Library 102,Slow network speed,Network,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0753,08/29/2023,09:47,S0***576,Show Me Center Lab,Lab equipment request,Other,Closed,2.4,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0754,09/18/2023,14:57,S0***507,Kent Library 102,Keyboard unresponsive,Hardware,Closed,5.3,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0755,10/31/2023,13:01,S0***317,Academic Hall 110,License activation error,Software,Closed,1.7,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0756,09/21/2023,13:11,S0***786,Show Me Center Lab,Password reset,Account/Access,Closed,2.7,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0757,10/02/2023,16:48,S0***357,Carnahan Hall 214,Slow network speed,Network,Closed,3.0,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0758,11/03/2023,16:30,S0***140,Kent Library 102,Room booking question,Other,Closed,5.8,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0759,09/28/2023,11:02,S0***914,Carnahan Hall 214,Room booking question,Other,Closed,1.2,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0760,09/18/2023,13:38,S0***123,Carnahan Hall 214,Browser freezing,Software,Closed,3.6,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0761,08/28/2023,14:09,S0***877,Kent Library 102,Keyboard unresponsive,Hardware,Closed,4.6,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0762,11/13/2023,08:54,S0***815,Show Me Center Lab,Room booking question,Other,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0763,10/23/2023,11:21,S0***098,Kent Library 102,USB device not recognized,Hardware,Closed,4.6,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0764,09/25/2023,09:19,S0***372,Kent Library 101,Slow network speed,Network,Closed,0.6,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0765,09/11/2023,11:10,S0***081,Carnahan Hall 214,Application crashing,Software,Closed,2.6,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0766,10/27/2023,11:48,S0***336,Carnahan Hall 214,WiFi authentication failed,Network,In Progress,2.3,R. Chen,"User unavailable, follow-up scheduled."
+TKT-F23-0767,09/05/2023,13:29,S0***916,Carnahan Hall 214,Driver conflict,Software,Closed,2.0,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0768,09/04/2023,12:21,S0***264,Carnahan Hall 214,USB device not recognized,Hardware,In Progress,2.5,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-0769,08/28/2023,15:29,S0***491,Kent Library 102,Email access denied,Account/Access,Closed,0.7,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0770,10/02/2023,16:45,S0***376,Show Me Center Lab,Furniture issue,Other,Closed,5.2,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0771,09/27/2023,14:09,S0***364,Kent Library 101,VPN not connecting,Network,Closed,3.7,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0772,09/18/2023,10:00,S0***563,Kent Library 102,OS update loop,Software,Closed,3.0,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0773,11/02/2023,16:43,S0***754,Kent Library 101,Printer not connecting,Hardware,Closed,2.5,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0774,10/17/2023,14:11,S0***379,Show Me Center Lab,Browser freezing,Software,Closed,3.6,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0775,08/22/2023,11:56,S0***551,Academic Hall 110,Email access denied,Account/Access,Closed,1.6,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0776,11/06/2023,08:57,S0***048,Carnahan Hall 214,Application crashing,Software,Closed,2.5,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0777,09/25/2023,16:00,S0***312,Kent Library 102,Keyboard unresponsive,Hardware,Closed,5.4,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0778,10/30/2023,13:52,S0***456,Show Me Center Lab,MFA not working,Account/Access,In Progress,4.3,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-0779,08/30/2023,15:03,S0***258,Kent Library 102,USB device not recognized,Hardware,Closed,2.9,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0780,09/11/2023,09:14,S0***162,Kent Library 101,Browser freezing,Software,Closed,1.4,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0781,09/04/2023,13:23,S0***278,Carnahan Hall 214,No internet connection,Network,Closed,5.5,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0782,09/11/2023,16:35,S0***385,Kent Library 102,Browser freezing,Software,Closed,1.6,R. Chen,Cable swap resolved signal issue.
+TKT-F23-0783,10/30/2023,16:25,S0***928,Academic Hall 110,Canvas login loop,Account/Access,In Progress,4.9,R. Chen,"User unavailable, follow-up scheduled."
+TKT-F23-0784,10/30/2023,08:04,S0***017,Academic Hall 110,PC won't power on,Hardware,Closed,0.8,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0785,10/26/2023,16:09,S0***429,Academic Hall 110,Driver conflict,Software,Closed,1.5,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0786,10/16/2023,14:09,S0***611,Kent Library 102,Account locked out,Account/Access,Closed,5.4,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0787,09/06/2023,11:29,S0***672,Kent Library 101,Room booking question,Other,Closed,5.1,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0788,09/12/2023,12:20,S0***390,Show Me Center Lab,Password reset,Account/Access,Closed,0.6,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0789,09/15/2023,09:02,S0***210,Show Me Center Lab,Mouse not working,Hardware,Closed,3.2,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0790,11/20/2023,10:15,S0***243,Kent Library 101,VPN not connecting,Network,In Progress,4.3,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0791,09/21/2023,16:42,S0***069,Kent Library 101,PC won't power on,Hardware,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0792,10/18/2023,11:55,S0***630,Show Me Center Lab,MFA not working,Account/Access,Closed,1.6,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0793,11/02/2023,14:12,S0***849,Academic Hall 110,Room booking question,Other,In Progress,2.9,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-0794,10/30/2023,13:09,S0***169,Kent Library 102,General IT inquiry,Other,Closed,5.4,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0795,09/11/2023,12:28,S0***702,Kent Library 101,No internet connection,Network,In Progress,5.0,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0796,09/07/2023,08:51,S0***226,Kent Library 102,USB device not recognized,Hardware,Closed,0.6,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0797,10/23/2023,13:33,S0***185,Show Me Center Lab,Software install failed,Software,In Progress,3.2,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-0798,09/18/2023,10:26,S0***691,Kent Library 101,OS update loop,Software,Closed,1.0,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0799,09/12/2023,12:47,S0***520,Show Me Center Lab,Software install failed,Software,Closed,0.8,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0800,09/01/2023,16:44,S0***118,Academic Hall 110,SSO failure,Account/Access,Closed,3.7,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0801,09/27/2023,10:23,S0***595,Kent Library 102,DNS resolution error,Network,Closed,0.9,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0802,10/09/2023,14:35,S0***730,Show Me Center Lab,OS update loop,Software,Closed,1.4,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-0803,10/23/2023,09:19,S0***967,Carnahan Hall 214,Account locked out,Account/Access,In Progress,3.2,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0804,09/05/2023,16:56,S0***417,Carnahan Hall 214,Furniture issue,Other,In Progress,3.1,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0805,10/23/2023,09:49,S0***857,Show Me Center Lab,No internet connection,Network,Closed,5.6,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0806,11/13/2023,16:52,S0***734,Academic Hall 110,Furniture issue,Other,Closed,0.8,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0807,09/04/2023,08:38,S0***155,Kent Library 101,Room booking question,Other,Closed,0.7,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0808,09/11/2023,13:04,S0***902,Kent Library 102,IP conflict detected,Network,Closed,5.7,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0809,09/29/2023,15:58,S0***416,Kent Library 101,SSO failure,Account/Access,Closed,4.1,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0810,11/13/2023,08:05,S0***811,Academic Hall 110,Monitor no signal,Hardware,In Progress,1.7,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0811,10/30/2023,11:56,S0***863,Kent Library 101,Furniture issue,Other,In Progress,4.2,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0812,11/02/2023,10:12,S0***016,Kent Library 101,Canvas login loop,Account/Access,Closed,5.8,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0813,08/28/2023,13:52,S0***382,Kent Library 101,General IT inquiry,Other,Closed,3.4,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0814,11/09/2023,10:00,S0***740,Academic Hall 110,License activation error,Software,Closed,0.9,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0815,10/17/2023,08:10,S0***532,Academic Hall 110,DNS resolution error,Network,Closed,3.4,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0816,09/11/2023,10:34,S0***871,Show Me Center Lab,Driver conflict,Software,Closed,4.3,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0817,09/05/2023,15:50,S0***534,Kent Library 101,License activation error,Software,In Progress,2.4,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0818,10/02/2023,13:25,S0***965,Kent Library 101,Room booking question,Other,Closed,5.8,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0819,11/10/2023,13:46,S0***276,Kent Library 101,Password reset,Account/Access,Closed,1.9,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0820,09/11/2023,13:02,S0***244,Kent Library 101,Application crashing,Software,Closed,1.5,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0821,11/13/2023,13:34,S0***314,Kent Library 101,Software install failed,Software,Closed,5.1,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0822,10/25/2023,10:03,S0***597,Academic Hall 110,No internet connection,Network,Closed,4.7,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0823,10/12/2023,09:10,S0***924,Kent Library 102,Software install failed,Software,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0824,10/26/2023,13:34,S0***735,Carnahan Hall 214,Monitor no signal,Hardware,In Progress,5.0,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-0825,10/18/2023,10:46,S0***203,Show Me Center Lab,Room booking question,Other,Closed,3.4,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-0826,10/31/2023,15:04,S0***773,Carnahan Hall 214,Furniture issue,Other,In Progress,3.4,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0827,11/06/2023,16:09,S0***556,Kent Library 101,Furniture issue,Other,Closed,5.0,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0828,11/02/2023,08:42,S0***330,Show Me Center Lab,Monitor no signal,Hardware,Closed,2.4,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0829,10/25/2023,13:59,S0***539,Show Me Center Lab,Canvas login loop,Account/Access,Closed,4.9,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0830,09/06/2023,14:52,S0***295,Kent Library 101,Keyboard unresponsive,Hardware,Closed,4.2,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0831,09/25/2023,15:39,S0***374,Kent Library 102,Application crashing,Software,Closed,2.6,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-0832,11/13/2023,12:27,S0***222,Carnahan Hall 214,Monitor no signal,Hardware,Closed,1.1,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0833,09/18/2023,12:21,S0***949,Kent Library 101,Email access denied,Account/Access,Closed,1.5,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0834,11/15/2023,08:13,S0***335,Kent Library 102,Account locked out,Account/Access,Closed,2.0,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0835,08/21/2023,08:03,S0***821,Kent Library 102,General IT inquiry,Other,Closed,1.0,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0836,11/06/2023,14:10,S0***522,Academic Hall 110,Mouse not working,Hardware,Closed,5.5,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0837,08/29/2023,10:58,S0***212,Academic Hall 110,USB device not recognized,Hardware,Closed,3.6,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0838,10/06/2023,15:22,S0***337,Show Me Center Lab,VPN not connecting,Network,Closed,2.5,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0839,09/19/2023,08:54,S0***010,Show Me Center Lab,Email access denied,Account/Access,Closed,2.8,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0840,09/27/2023,09:30,S0***006,Kent Library 101,Printer not connecting,Hardware,Closed,5.2,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0841,08/25/2023,11:59,S0***770,Carnahan Hall 214,No internet connection,Network,Closed,3.2,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0842,09/25/2023,09:07,S0***414,Carnahan Hall 214,Slow network speed,Network,Closed,2.4,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0843,10/03/2023,10:23,S0***716,Kent Library 102,Application crashing,Software,Closed,4.5,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0844,09/08/2023,11:30,S0***120,Kent Library 102,VPN not connecting,Network,In Progress,1.2,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0845,10/10/2023,12:25,S0***737,Carnahan Hall 214,Password reset,Account/Access,Closed,1.7,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0846,11/08/2023,09:13,S0***729,Kent Library 102,Keyboard unresponsive,Hardware,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0847,10/24/2023,12:25,S0***874,Carnahan Hall 214,WiFi authentication failed,Network,Closed,3.7,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0848,09/27/2023,12:38,S0***675,Kent Library 102,Software install failed,Software,Closed,3.7,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0849,10/11/2023,09:30,S0***579,Kent Library 102,VPN not connecting,Network,Closed,2.3,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-0850,09/06/2023,13:01,S0***695,Kent Library 102,No internet connection,Network,Closed,4.7,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0851,10/16/2023,13:15,S0***803,Kent Library 102,Password reset,Account/Access,Closed,2.7,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0852,09/07/2023,16:46,S0***345,Kent Library 101,USB device not recognized,Hardware,Closed,1.7,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0853,11/08/2023,09:47,S0***433,Show Me Center Lab,PC won't power on,Hardware,Closed,5.9,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0854,09/07/2023,14:54,S0***846,Kent Library 101,Canvas login loop,Account/Access,In Progress,2.9,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0855,08/29/2023,15:36,S0***028,Carnahan Hall 214,Application crashing,Software,Closed,1.7,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0856,09/25/2023,12:17,S0***088,Kent Library 101,PC won't power on,Hardware,Closed,5.2,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0857,11/01/2023,10:09,S0***807,Kent Library 101,Mouse not working,Hardware,Closed,2.7,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0858,11/07/2023,11:33,S0***628,Kent Library 101,Password reset,Account/Access,Closed,5.4,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0859,09/13/2023,12:08,S0***660,Kent Library 101,Canvas login loop,Account/Access,Closed,5.6,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0860,11/17/2023,16:36,S0***684,Show Me Center Lab,Slow network speed,Network,In Progress,3.9,M. Patel,Escalated to senior tech for further diagnosis.
+TKT-F23-0861,08/28/2023,10:14,S0***144,Kent Library 102,Furniture issue,Other,Closed,5.2,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0862,08/31/2023,12:53,S0***148,Carnahan Hall 214,Lab equipment request,Other,Closed,5.0,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0863,09/19/2023,09:50,S0***479,Academic Hall 110,MFA not working,Account/Access,In Progress,1.2,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0864,09/18/2023,15:13,S0***576,Show Me Center Lab,Password reset,Account/Access,Closed,4.2,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0865,10/09/2023,10:08,S0***643,Kent Library 102,Room booking question,Other,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0866,11/06/2023,11:39,S0***602,Show Me Center Lab,IP conflict detected,Network,In Progress,3.2,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0867,09/04/2023,09:54,S0***107,Show Me Center Lab,Keyboard unresponsive,Hardware,Closed,4.8,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0868,10/02/2023,08:17,S0***544,Carnahan Hall 214,VPN not connecting,Network,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-0869,08/22/2023,11:50,S0***577,Kent Library 101,General IT inquiry,Other,In Progress,3.1,R. Chen,"User unavailable, follow-up scheduled."
+TKT-F23-0870,11/13/2023,11:10,S0***601,Academic Hall 110,Furniture issue,Other,In Progress,3.0,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-0871,11/08/2023,15:19,S0***060,Kent Library 102,Keyboard unresponsive,Hardware,Closed,3.3,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-0872,10/02/2023,08:10,S0***065,Kent Library 101,No internet connection,Network,Closed,6.0,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0873,11/06/2023,09:58,S0***395,Show Me Center Lab,IP conflict detected,Network,Closed,2.7,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0874,10/23/2023,08:53,S0***493,Kent Library 102,IP conflict detected,Network,Closed,5.5,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0875,10/02/2023,10:00,S0***470,Show Me Center Lab,Software install failed,Software,Closed,5.2,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0876,10/09/2023,10:09,S0***106,Carnahan Hall 214,Driver conflict,Software,Closed,5.4,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0877,08/31/2023,14:20,S0***842,Kent Library 102,General IT inquiry,Other,Closed,4.6,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0878,10/11/2023,16:55,S0***853,Kent Library 101,No internet connection,Network,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0879,09/13/2023,12:06,S0***451,Kent Library 101,Driver conflict,Software,Closed,2.7,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0880,10/30/2023,14:18,S0***929,Show Me Center Lab,OS update loop,Software,Closed,1.1,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0881,10/02/2023,11:23,S0***064,Carnahan Hall 214,IP conflict detected,Network,Closed,4.6,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0882,10/03/2023,12:21,S0***301,Kent Library 102,General IT inquiry,Other,Closed,0.7,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0883,09/07/2023,09:31,S0***751,Carnahan Hall 214,Driver conflict,Software,Closed,1.7,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-0884,09/13/2023,13:17,S0***192,Kent Library 102,OS update loop,Software,Closed,1.5,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0885,09/25/2023,15:33,S0***067,Carnahan Hall 214,Canvas login loop,Account/Access,Closed,1.6,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0886,11/06/2023,15:53,S0***489,Academic Hall 110,General IT inquiry,Other,In Progress,2.6,R. Chen,Awaiting replacement part from IT supply room.
+TKT-F23-0887,10/02/2023,13:12,S0***235,Carnahan Hall 214,Lab equipment request,Other,Closed,5.3,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0888,10/11/2023,11:20,S0***750,Kent Library 101,PC won't power on,Hardware,Closed,3.0,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0889,09/15/2023,13:00,S0***144,Kent Library 101,Password reset,Account/Access,Closed,1.6,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0890,10/23/2023,08:45,S0***196,Kent Library 101,Keyboard unresponsive,Hardware,Closed,2.6,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0891,10/16/2023,12:14,S0***947,Kent Library 101,Account locked out,Account/Access,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0892,10/26/2023,08:47,S0***194,Academic Hall 110,WiFi authentication failed,Network,Closed,0.8,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0893,09/14/2023,12:40,S0***208,Carnahan Hall 214,No internet connection,Network,Closed,0.9,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0894,09/11/2023,08:56,S0***102,Kent Library 102,Furniture issue,Other,Closed,0.9,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0895,10/26/2023,16:06,S0***654,Show Me Center Lab,Furniture issue,Other,Closed,2.5,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0896,10/16/2023,11:51,S0***307,Kent Library 101,General IT inquiry,Other,In Progress,2.3,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-0897,11/06/2023,13:11,S0***174,Carnahan Hall 214,MFA not working,Account/Access,Closed,5.4,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0898,11/03/2023,10:07,S0***667,Kent Library 101,MFA not working,Account/Access,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0899,10/02/2023,15:07,S0***060,Show Me Center Lab,Driver conflict,Software,Closed,1.6,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0900,08/24/2023,16:43,S0***113,Show Me Center Lab,Room booking question,Other,Closed,3.7,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0901,11/06/2023,13:44,S0***266,Carnahan Hall 214,Slow network speed,Network,In Progress,2.9,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-0902,11/07/2023,14:09,S0***633,Kent Library 102,Slow network speed,Network,Closed,5.0,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0903,09/27/2023,08:02,S0***989,Show Me Center Lab,DNS resolution error,Network,Closed,1.1,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0904,11/13/2023,13:57,S0***782,Carnahan Hall 214,WiFi authentication failed,Network,Closed,2.2,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0905,09/11/2023,13:06,S0***121,Kent Library 101,Mouse not working,Hardware,Closed,1.7,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0906,11/15/2023,15:07,S0***784,Kent Library 101,Account locked out,Account/Access,In Progress,3.5,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-0907,11/20/2023,11:27,S0***091,Kent Library 101,Printer not connecting,Hardware,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0908,09/14/2023,09:11,S0***948,Show Me Center Lab,IP conflict detected,Network,Closed,5.3,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0909,09/06/2023,10:52,S0***241,Carnahan Hall 214,No internet connection,Network,Closed,3.3,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-0910,10/31/2023,14:37,S0***079,Show Me Center Lab,General IT inquiry,Other,In Progress,3.7,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0911,10/16/2023,10:04,S0***242,Kent Library 102,PC won't power on,Hardware,Closed,1.5,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0912,10/11/2023,15:40,S0***174,Carnahan Hall 214,Furniture issue,Other,Closed,3.1,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0913,10/06/2023,13:51,S0***984,Carnahan Hall 214,Password reset,Account/Access,In Progress,2.1,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0914,09/05/2023,08:48,S0***699,Carnahan Hall 214,Software install failed,Software,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-0915,10/12/2023,08:23,S0***037,Carnahan Hall 214,General IT inquiry,Other,Closed,2.7,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-0916,10/04/2023,15:15,S0***701,Academic Hall 110,Canvas login loop,Account/Access,Closed,5.9,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0917,09/25/2023,13:07,S0***132,Carnahan Hall 214,Room booking question,Other,Closed,1.7,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0918,08/29/2023,10:25,S0***443,Show Me Center Lab,Mouse not working,Hardware,Closed,4.8,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-0919,09/22/2023,12:17,S0***411,Show Me Center Lab,Account locked out,Account/Access,Closed,4.1,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0920,10/23/2023,11:06,S0***481,Kent Library 102,Mouse not working,Hardware,Closed,5.6,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0921,10/30/2023,14:31,S0***764,Kent Library 102,Canvas login loop,Account/Access,Closed,1.2,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0922,10/10/2023,15:15,S0***038,Kent Library 102,Driver conflict,Software,Closed,3.3,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0923,09/04/2023,10:33,S0***748,Carnahan Hall 214,USB device not recognized,Hardware,Closed,4.1,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0924,09/01/2023,08:18,S0***003,Academic Hall 110,Slow network speed,Network,Closed,0.7,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0925,10/20/2023,13:45,S0***582,Kent Library 101,Slow network speed,Network,Closed,1.0,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-0926,09/27/2023,13:04,S0***930,Show Me Center Lab,Keyboard unresponsive,Hardware,Closed,6.0,M. Patel,Cable swap resolved signal issue.
+TKT-F23-0927,11/01/2023,15:19,S0***158,Kent Library 101,Keyboard unresponsive,Hardware,Closed,1.0,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0928,09/15/2023,11:21,S0***043,Carnahan Hall 214,Slow network speed,Network,Closed,0.6,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-0929,08/22/2023,09:12,S0***030,Show Me Center Lab,Canvas login loop,Account/Access,In Progress,3.1,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0930,09/25/2023,13:10,S0***230,Kent Library 102,PC won't power on,Hardware,Closed,5.2,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0931,11/17/2023,13:39,S0***420,Kent Library 102,Furniture issue,Other,In Progress,4.4,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0932,10/12/2023,12:34,S0***046,Show Me Center Lab,Lab equipment request,Other,Closed,5.1,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0933,09/26/2023,16:26,S0***218,Kent Library 102,Password reset,Account/Access,Closed,5.5,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0934,09/20/2023,08:14,S0***715,Academic Hall 110,DNS resolution error,Network,Closed,1.6,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0935,10/19/2023,09:44,S0***979,Carnahan Hall 214,Monitor no signal,Hardware,Closed,3.3,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0936,10/04/2023,13:42,S0***123,Carnahan Hall 214,Mouse not working,Hardware,Closed,5.3,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-0937,11/14/2023,10:39,S0***925,Kent Library 101,Canvas login loop,Account/Access,In Progress,3.4,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-0938,11/06/2023,14:17,S0***828,Show Me Center Lab,Email access denied,Account/Access,Closed,1.1,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0939,09/11/2023,16:33,S0***945,Show Me Center Lab,Software install failed,Software,Closed,2.1,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-0940,09/25/2023,14:32,S0***052,Carnahan Hall 214,Mouse not working,Hardware,Closed,4.3,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0941,10/25/2023,14:48,S0***595,Academic Hall 110,Software install failed,Software,In Progress,2.0,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-0942,09/04/2023,13:34,S0***683,Kent Library 102,Driver conflict,Software,Closed,4.7,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0943,09/11/2023,08:26,S0***096,Kent Library 102,Slow network speed,Network,Closed,0.6,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0944,11/08/2023,16:52,S0***278,Carnahan Hall 214,Password reset,Account/Access,Closed,3.2,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0945,11/13/2023,10:19,S0***338,Academic Hall 110,Application crashing,Software,Closed,5.4,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-0946,08/28/2023,15:56,S0***057,Carnahan Hall 214,Printer not connecting,Hardware,Closed,1.5,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-0947,11/10/2023,14:05,S0***878,Kent Library 102,No internet connection,Network,In Progress,2.7,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0948,08/24/2023,12:24,S0***911,Kent Library 102,License activation error,Software,Closed,1.7,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0949,10/05/2023,14:38,S0***934,Carnahan Hall 214,Lab equipment request,Other,Closed,4.6,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0950,09/21/2023,14:01,S0***393,Show Me Center Lab,Room booking question,Other,Closed,4.0,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0951,09/04/2023,15:25,S0***398,Show Me Center Lab,Password reset,Account/Access,Closed,2.4,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0952,08/30/2023,09:07,S0***728,Kent Library 101,Monitor no signal,Hardware,In Progress,2.3,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0953,11/06/2023,13:15,S0***827,Carnahan Hall 214,Room booking question,Other,Closed,4.4,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-0954,11/01/2023,15:55,S0***804,Kent Library 101,General IT inquiry,Other,Closed,5.3,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0955,10/02/2023,16:57,S0***439,Carnahan Hall 214,SSO failure,Account/Access,In Progress,2.9,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0956,11/13/2023,16:22,S0***176,Kent Library 101,Furniture issue,Other,In Progress,1.9,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-0957,10/16/2023,08:30,S0***126,Show Me Center Lab,MFA not working,Account/Access,In Progress,2.5,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-0958,08/31/2023,12:43,S0***066,Carnahan Hall 214,General IT inquiry,Other,Closed,4.8,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0959,09/08/2023,10:57,S0***442,Kent Library 101,Slow network speed,Network,Closed,4.7,R. Chen,"Reset credentials, user verified access."
+TKT-F23-0960,08/30/2023,09:44,S0***364,Carnahan Hall 214,Account locked out,Account/Access,Closed,2.8,S. Davis,"Reset credentials, user verified access."
+TKT-F23-0961,10/23/2023,11:01,S0***611,Show Me Center Lab,Browser freezing,Software,Closed,5.2,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-0962,09/13/2023,08:36,S0***625,Kent Library 102,OS update loop,Software,In Progress,4.6,R. Chen,"User unavailable, follow-up scheduled."
+TKT-F23-0963,11/13/2023,14:14,S0***519,Show Me Center Lab,DNS resolution error,Network,Closed,3.8,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0964,10/31/2023,10:26,S0***070,Carnahan Hall 214,Canvas login loop,Account/Access,Closed,1.8,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-0965,10/23/2023,09:53,S0***724,Academic Hall 110,Furniture issue,Other,Closed,1.8,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-0966,10/17/2023,11:34,S0***591,Kent Library 101,No internet connection,Network,In Progress,3.0,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0967,11/15/2023,14:32,S0***448,Academic Hall 110,Email access denied,Account/Access,Closed,3.5,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-0968,08/24/2023,16:23,S0***740,Show Me Center Lab,Furniture issue,Other,Closed,2.5,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0969,11/01/2023,12:18,S0***529,Academic Hall 110,Software install failed,Software,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-0970,09/27/2023,15:15,S0***682,Show Me Center Lab,General IT inquiry,Other,Closed,5.4,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0971,09/01/2023,16:02,S0***526,Kent Library 101,Email access denied,Account/Access,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0972,09/26/2023,08:01,S0***541,Show Me Center Lab,Lab equipment request,Other,Closed,5.3,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0973,10/16/2023,13:51,S0***436,Show Me Center Lab,No internet connection,Network,Closed,1.0,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-0974,10/19/2023,13:55,S0***988,Show Me Center Lab,Keyboard unresponsive,Hardware,Closed,5.7,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0975,09/26/2023,14:53,S0***641,Academic Hall 110,Keyboard unresponsive,Hardware,Closed,4.9,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-0976,11/09/2023,14:46,S0***507,Show Me Center Lab,Mouse not working,Hardware,Closed,3.7,M. Patel,"Reset credentials, user verified access."
+TKT-F23-0977,09/26/2023,13:36,S0***365,Carnahan Hall 214,Password reset,Account/Access,Closed,5.1,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0978,09/21/2023,08:58,S0***657,Kent Library 102,SSO failure,Account/Access,Closed,3.2,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-0979,10/18/2023,12:05,S0***496,Kent Library 102,Canvas login loop,Account/Access,Closed,2.6,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0980,11/02/2023,14:33,S0***600,Kent Library 102,Application crashing,Software,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-0981,11/09/2023,15:44,S0***966,Kent Library 102,Lab equipment request,Other,Closed,3.3,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-0982,11/20/2023,12:30,S0***324,Kent Library 102,Slow network speed,Network,In Progress,2.4,T. Amisha,Awaiting replacement part from IT supply room.
+TKT-F23-0983,09/25/2023,12:38,S0***115,Academic Hall 110,License activation error,Software,Closed,2.9,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-0984,11/13/2023,11:21,S0***454,Show Me Center Lab,Printer not connecting,Hardware,Closed,3.7,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-0985,09/08/2023,16:15,S0***117,Kent Library 102,Browser freezing,Software,Closed,3.4,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0986,09/04/2023,16:49,S0***549,Academic Hall 110,Password reset,Account/Access,Closed,4.9,S. Davis,Cable swap resolved signal issue.
+TKT-F23-0987,10/09/2023,13:28,S0***860,Academic Hall 110,Application crashing,Software,Closed,0.8,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-0988,09/04/2023,13:22,S0***827,Kent Library 102,Application crashing,Software,Closed,2.1,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-0989,10/05/2023,15:53,S0***898,Academic Hall 110,Furniture issue,Other,Closed,3.7,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0990,09/14/2023,09:39,S0***181,Show Me Center Lab,Printer not connecting,Hardware,Closed,3.2,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-0991,09/29/2023,08:25,S0***455,Academic Hall 110,Printer not connecting,Hardware,Closed,1.7,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-0992,08/28/2023,14:25,S0***164,Kent Library 101,Lab equipment request,Other,Closed,2.7,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-0993,10/26/2023,13:31,S0***420,Kent Library 102,Printer not connecting,Hardware,Closed,3.1,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-0994,10/17/2023,15:00,S0***999,Show Me Center Lab,OS update loop,Software,In Progress,4.6,A. Johnson,"User unavailable, follow-up scheduled."
+TKT-F23-0995,09/26/2023,10:00,S0***347,Carnahan Hall 214,General IT inquiry,Other,Closed,5.0,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-0996,10/04/2023,12:37,S0***575,Carnahan Hall 214,Password reset,Account/Access,In Progress,3.4,R. Chen,"User unavailable, follow-up scheduled."
+TKT-F23-0997,09/20/2023,14:41,S0***123,Academic Hall 110,OS update loop,Software,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-0998,09/04/2023,08:54,S0***878,Kent Library 102,OS update loop,Software,Closed,5.0,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-0999,10/19/2023,09:19,S0***958,Academic Hall 110,IP conflict detected,Network,Closed,5.1,M. Patel,Cable swap resolved signal issue.
+TKT-F23-1000,11/06/2023,08:05,S0***805,Carnahan Hall 214,Mouse not working,Hardware,In Progress,1.7,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-1001,09/08/2023,14:18,S0***533,Kent Library 102,Password reset,Account/Access,Closed,1.8,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-1002,09/04/2023,10:48,S0***917,Show Me Center Lab,Room booking question,Other,In Progress,3.5,R. Chen,"User unavailable, follow-up scheduled."
+TKT-F23-1003,11/06/2023,12:36,S0***405,Kent Library 102,Canvas login loop,Account/Access,Closed,1.0,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-1004,10/18/2023,16:02,S0***105,Academic Hall 110,Lab equipment request,Other,Closed,5.3,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-1005,09/08/2023,11:28,S0***795,Kent Library 102,Driver conflict,Software,In Progress,4.4,R. Chen,Awaiting replacement part from IT supply room.
+TKT-F23-1006,09/14/2023,10:50,S0***921,Show Me Center Lab,Driver conflict,Software,Closed,2.0,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-1007,08/25/2023,09:40,S0***593,Show Me Center Lab,DNS resolution error,Network,Closed,2.2,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-1008,10/02/2023,10:55,S0***364,Carnahan Hall 214,Monitor no signal,Hardware,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-1009,09/25/2023,14:45,S0***563,Kent Library 102,Application crashing,Software,Closed,3.5,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-1010,10/10/2023,08:07,S0***754,Academic Hall 110,Lab equipment request,Other,Closed,1.1,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-1011,08/24/2023,11:15,S0***379,Kent Library 101,Account locked out,Account/Access,Closed,5.8,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-1012,08/29/2023,15:41,S0***552,Academic Hall 110,Lab equipment request,Other,In Progress,2.1,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-1013,10/12/2023,09:22,S0***047,Kent Library 101,Monitor no signal,Hardware,Closed,1.1,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-1014,10/31/2023,14:05,S0***312,Show Me Center Lab,No internet connection,Network,Closed,2.2,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-1015,11/06/2023,08:37,S0***457,Academic Hall 110,Email access denied,Account/Access,Closed,5.4,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-1016,11/06/2023,16:28,S0***258,Kent Library 101,Room booking question,Other,In Progress,1.8,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-1017,10/18/2023,16:18,S0***162,Carnahan Hall 214,Account locked out,Account/Access,Closed,3.7,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-1018,09/11/2023,08:08,S0***279,Show Me Center Lab,Canvas login loop,Account/Access,Closed,5.9,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-1019,11/16/2023,08:00,S0***386,Kent Library 101,USB device not recognized,Hardware,Closed,5.6,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-1020,09/07/2023,14:29,S0***928,Kent Library 102,Keyboard unresponsive,Hardware,In Progress,2.5,M. Patel,Escalated to senior tech for further diagnosis.
+TKT-F23-1021,11/06/2023,12:48,S0***016,Academic Hall 110,Software install failed,Software,In Progress,1.5,R. Chen,"User unavailable, follow-up scheduled."
+TKT-F23-1022,10/03/2023,08:34,S0***430,Show Me Center Lab,Mouse not working,Hardware,Closed,5.6,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-1023,08/22/2023,12:14,S0***611,Show Me Center Lab,Driver conflict,Software,Closed,2.1,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-1024,09/14/2023,15:14,S0***672,Kent Library 102,Printer not connecting,Hardware,Closed,5.5,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-1025,11/20/2023,12:44,S0***390,Carnahan Hall 214,No internet connection,Network,Closed,4.7,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-1026,10/23/2023,16:07,S0***210,Kent Library 101,Slow network speed,Network,Closed,5.4,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-1027,08/28/2023,13:59,S0***244,Kent Library 102,SSO failure,Account/Access,Closed,5.5,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-1028,08/28/2023,08:06,S0***268,Kent Library 101,Email access denied,Account/Access,Closed,6.0,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-1029,11/03/2023,14:42,S0***726,Kent Library 102,SSO failure,Account/Access,Closed,4.8,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-1030,11/06/2023,13:40,S0***732,Carnahan Hall 214,Account locked out,Account/Access,Closed,4.4,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-1031,09/21/2023,10:15,S0***061,Kent Library 102,Canvas login loop,Account/Access,Closed,1.8,R. Chen,"Reset credentials, user verified access."
+TKT-F23-1032,11/16/2023,09:36,S0***160,Show Me Center Lab,Slow network speed,Network,Closed,3.3,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-1033,09/04/2023,10:50,S0***137,Carnahan Hall 214,Email access denied,Account/Access,Closed,5.5,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-1034,09/22/2023,13:45,S0***185,Kent Library 101,General IT inquiry,Other,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-1035,09/25/2023,14:10,S0***307,Kent Library 101,No internet connection,Network,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-1036,11/13/2023,16:37,S0***128,Carnahan Hall 214,Software install failed,Software,Closed,5.8,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-1037,11/03/2023,12:41,S0***161,Kent Library 102,Lab equipment request,Other,Closed,3.2,S. Davis,"Reset credentials, user verified access."
+TKT-F23-1038,08/24/2023,12:40,S0***184,Kent Library 102,USB device not recognized,Hardware,Closed,4.8,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-1039,10/17/2023,10:48,S0***643,Kent Library 102,General IT inquiry,Other,In Progress,2.7,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-1040,09/05/2023,08:56,S0***765,Show Me Center Lab,WiFi authentication failed,Network,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-1041,11/13/2023,15:14,S0***850,Show Me Center Lab,OS update loop,Software,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-1042,08/24/2023,13:21,S0***263,Show Me Center Lab,WiFi authentication failed,Network,Closed,1.4,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-1043,09/18/2023,11:04,S0***070,Show Me Center Lab,OS update loop,Software,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-1044,11/06/2023,13:24,S0***678,Academic Hall 110,WiFi authentication failed,Network,Closed,2.6,S. Davis,"Replaced toner cartridge, tested print job."
+TKT-F23-1045,10/24/2023,14:12,S0***719,Carnahan Hall 214,SSO failure,Account/Access,Closed,3.2,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-1046,09/07/2023,09:01,S0***308,Kent Library 102,Mouse not working,Hardware,Closed,0.8,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-1047,11/02/2023,13:25,S0***221,Carnahan Hall 214,Driver conflict,Software,Closed,5.1,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-1048,10/04/2023,16:54,S0***903,Kent Library 102,Browser freezing,Software,Closed,2.5,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-1049,08/28/2023,11:54,S0***464,Show Me Center Lab,Lab equipment request,Other,Closed,2.1,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-1050,09/15/2023,12:33,S0***682,Academic Hall 110,Software install failed,Software,Closed,3.9,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-1051,10/17/2023,11:15,S0***002,Show Me Center Lab,Slow network speed,Network,Closed,2.8,S. Davis,Cable swap resolved signal issue.
+TKT-F23-1052,11/03/2023,14:36,S0***535,Kent Library 101,Lab equipment request,Other,Closed,1.9,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-1053,11/06/2023,16:23,S0***059,Carnahan Hall 214,WiFi authentication failed,Network,Closed,2.3,M. Patel,Cable swap resolved signal issue.
+TKT-F23-1054,10/25/2023,13:48,S0***018,Kent Library 102,Driver conflict,Software,In Progress,2.0,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-1055,08/25/2023,14:44,S0***524,Kent Library 102,General IT inquiry,Other,Closed,3.3,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-1056,08/25/2023,13:29,S0***353,Kent Library 101,General IT inquiry,Other,Closed,3.4,R. Chen,"Reset credentials, user verified access."
+TKT-F23-1057,09/19/2023,08:09,S0***951,Show Me Center Lab,General IT inquiry,Other,Closed,3.0,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-1058,09/20/2023,15:52,S0***429,Show Me Center Lab,License activation error,Software,Closed,4.1,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-1059,10/06/2023,16:26,S0***564,Kent Library 101,PC won't power on,Hardware,Closed,4.9,R. Chen,Cable swap resolved signal issue.
+TKT-F23-1060,08/24/2023,12:54,S0***801,Kent Library 102,Furniture issue,Other,Closed,3.7,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-1061,09/13/2023,14:34,S0***250,Kent Library 101,General IT inquiry,Other,Closed,2.0,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-1062,11/03/2023,13:50,S0***691,Kent Library 102,License activation error,Software,Closed,4.6,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-1063,10/02/2023,11:37,S0***566,Kent Library 101,USB device not recognized,Hardware,Closed,1.9,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-1064,09/25/2023,16:27,S0***989,Academic Hall 110,Furniture issue,Other,In Progress,4.8,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-1065,10/09/2023,09:16,S0***735,Kent Library 101,WiFi authentication failed,Network,Closed,5.6,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-1066,09/01/2023,11:53,S0***250,Kent Library 102,Keyboard unresponsive,Hardware,Closed,0.6,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-1067,09/20/2023,09:04,S0***644,Show Me Center Lab,Application crashing,Software,Closed,1.9,R. Chen,"Reset credentials, user verified access."
+TKT-F23-1068,09/11/2023,09:18,S0***696,Kent Library 101,Mouse not working,Hardware,Closed,5.7,M. Patel,"Replaced toner cartridge, tested print job."
+TKT-F23-1069,10/23/2023,08:17,S0***850,Carnahan Hall 214,Application crashing,Software,Closed,3.2,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-1070,10/20/2023,15:01,S0***216,Kent Library 102,Driver conflict,Software,Closed,4.8,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-1071,10/09/2023,10:32,S0***573,Kent Library 101,Password reset,Account/Access,Closed,2.6,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-1072,10/19/2023,08:25,S0***365,Carnahan Hall 214,IP conflict detected,Network,Closed,1.7,R. Chen,"Reset credentials, user verified access."
+TKT-F23-1073,11/16/2023,14:53,S0***704,Academic Hall 110,Lab equipment request,Other,In Progress,1.5,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-1074,11/20/2023,16:32,S0***367,Kent Library 102,Furniture issue,Other,Closed,5.0,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-1075,10/20/2023,14:51,S0***798,Show Me Center Lab,Room booking question,Other,Closed,5.0,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-1076,11/02/2023,09:14,S0***109,Carnahan Hall 214,VPN not connecting,Network,Closed,5.1,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-1077,09/06/2023,15:54,S0***824,Academic Hall 110,Monitor no signal,Hardware,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-1078,08/21/2023,10:54,S0***662,Kent Library 101,Keyboard unresponsive,Hardware,Closed,0.9,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-1079,09/01/2023,15:59,S0***825,Kent Library 101,MFA not working,Account/Access,Closed,5.3,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-1080,10/27/2023,14:33,S0***757,Academic Hall 110,Application crashing,Software,Closed,5.0,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-1081,10/18/2023,08:03,S0***568,Academic Hall 110,Room booking question,Other,Closed,3.7,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-1082,10/16/2023,12:38,S0***036,Kent Library 101,Canvas login loop,Account/Access,In Progress,1.7,R. Chen,Awaiting replacement part from IT supply room.
+TKT-F23-1083,09/04/2023,09:40,S0***606,Kent Library 102,USB device not recognized,Hardware,Closed,4.0,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-1084,11/13/2023,14:47,S0***390,Show Me Center Lab,SSO failure,Account/Access,Closed,3.6,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-1085,11/14/2023,12:44,S0***163,Kent Library 102,USB device not recognized,Hardware,Closed,1.3,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-1086,09/12/2023,09:44,S0***372,Show Me Center Lab,General IT inquiry,Other,Closed,6.0,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-1087,09/28/2023,13:41,S0***127,Academic Hall 110,Software install failed,Software,Closed,3.8,M. Patel,"Reset credentials, user verified access."
+TKT-F23-1088,10/23/2023,11:51,S0***208,Kent Library 101,OS update loop,Software,Closed,2.5,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-1089,10/17/2023,09:22,S0***056,Show Me Center Lab,Email access denied,Account/Access,In Progress,2.9,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-1090,10/26/2023,12:20,S0***783,Kent Library 101,Room booking question,Other,Closed,1.9,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-1091,09/28/2023,15:35,S0***168,Kent Library 102,General IT inquiry,Other,Closed,2.7,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-1092,11/07/2023,15:08,S0***655,Show Me Center Lab,Slow network speed,Network,Closed,3.9,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-1093,09/28/2023,16:18,S0***355,Academic Hall 110,DNS resolution error,Network,Closed,1.3,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-1094,10/27/2023,09:30,S0***045,Kent Library 101,VPN not connecting,Network,Closed,5.3,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-1095,10/09/2023,14:37,S0***171,Kent Library 102,Application crashing,Software,Closed,0.8,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-1096,08/28/2023,12:12,S0***843,Kent Library 101,Driver conflict,Software,In Progress,4.4,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-1097,09/11/2023,10:12,S0***840,Carnahan Hall 214,Password reset,Account/Access,Closed,2.3,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-1098,09/12/2023,12:24,S0***604,Kent Library 102,DNS resolution error,Network,Closed,2.4,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-1099,09/18/2023,13:35,S0***249,Academic Hall 110,Mouse not working,Hardware,Closed,5.6,M. Patel,Cable swap resolved signal issue.
+TKT-F23-1100,10/02/2023,12:15,S0***550,Show Me Center Lab,Monitor no signal,Hardware,Closed,2.5,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-1101,10/11/2023,14:05,S0***953,Kent Library 101,Canvas login loop,Account/Access,Closed,1.0,S. Davis,Cable swap resolved signal issue.
+TKT-F23-1102,10/18/2023,09:04,S0***570,Kent Library 101,IP conflict detected,Network,In Progress,4.9,T. Amisha,"User unavailable, follow-up scheduled."
+TKT-F23-1103,08/22/2023,13:15,S0***177,Show Me Center Lab,PC won't power on,Hardware,In Progress,3.3,S. Davis,Escalated to senior tech for further diagnosis.
+TKT-F23-1104,08/28/2023,16:14,S0***219,Kent Library 102,Slow network speed,Network,Closed,5.1,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-1105,10/24/2023,12:12,S0***808,Carnahan Hall 214,PC won't power on,Hardware,Closed,3.6,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-1106,10/04/2023,08:46,S0***722,Show Me Center Lab,No internet connection,Network,Closed,3.4,R. Chen,"Reset credentials, user verified access."
+TKT-F23-1107,09/21/2023,14:26,S0***402,Show Me Center Lab,IP conflict detected,Network,Closed,1.7,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-1108,08/28/2023,10:35,S0***964,Kent Library 102,Slow network speed,Network,Closed,2.2,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-1109,10/02/2023,12:24,S0***182,Carnahan Hall 214,Room booking question,Other,Closed,5.0,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-1110,11/20/2023,13:16,S0***502,Carnahan Hall 214,Application crashing,Software,In Progress,4.1,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-1111,09/21/2023,08:48,S0***035,Kent Library 101,General IT inquiry,Other,Closed,4.7,A. Johnson,Cable swap resolved signal issue.
+TKT-F23-1112,10/09/2023,12:44,S0***559,Show Me Center Lab,Account locked out,Account/Access,Closed,0.6,S. Davis,Cable swap resolved signal issue.
+TKT-F23-1113,10/11/2023,10:19,S0***922,Kent Library 101,No internet connection,Network,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-1114,09/14/2023,08:31,S0***641,Academic Hall 110,VPN not connecting,Network,Closed,3.4,M. Patel,Cable swap resolved signal issue.
+TKT-F23-1115,10/25/2023,10:38,S0***460,Kent Library 102,Browser freezing,Software,Closed,2.8,R. Chen,Cable swap resolved signal issue.
+TKT-F23-1116,11/06/2023,14:16,S0***494,Kent Library 102,PC won't power on,Hardware,Closed,1.5,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-1117,10/16/2023,15:08,S0***518,Academic Hall 110,Keyboard unresponsive,Hardware,Closed,0.6,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-1118,08/29/2023,09:29,S0***977,Show Me Center Lab,Account locked out,Account/Access,In Progress,3.2,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-1119,11/07/2023,16:11,S0***982,Show Me Center Lab,WiFi authentication failed,Network,Closed,1.8,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-1120,09/01/2023,10:32,S0***311,Kent Library 102,Application crashing,Software,Closed,3.3,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-1121,10/05/2023,08:38,S0***409,Carnahan Hall 214,Password reset,Account/Access,In Progress,3.2,S. Davis,"User unavailable, follow-up scheduled."
+TKT-F23-1122,09/29/2023,15:36,S0***387,Academic Hall 110,Password reset,Account/Access,Closed,4.2,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-1123,09/25/2023,16:17,S0***022,Show Me Center Lab,SSO failure,Account/Access,Closed,3.7,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-1124,10/05/2023,09:40,S0***759,Academic Hall 110,Email access denied,Account/Access,Closed,5.8,R. Chen,"Reset credentials, user verified access."
+TKT-F23-1125,09/04/2023,16:06,S0***709,Carnahan Hall 214,VPN not connecting,Network,Closed,1.0,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-1126,11/17/2023,11:58,S0***649,Carnahan Hall 214,Email access denied,Account/Access,Closed,5.0,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-1127,10/23/2023,11:11,S0***025,Academic Hall 110,PC won't power on,Hardware,Closed,2.8,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-1128,10/12/2023,08:16,S0***980,Kent Library 101,Application crashing,Software,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-1129,09/25/2023,12:10,S0***218,Carnahan Hall 214,Monitor no signal,Hardware,Closed,4.6,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-1130,09/15/2023,14:12,S0***668,Academic Hall 110,SSO failure,Account/Access,In Progress,1.5,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-1131,09/08/2023,10:30,S0***108,Carnahan Hall 214,SSO failure,Account/Access,Closed,5.7,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-1132,11/07/2023,12:58,S0***984,Kent Library 101,Slow network speed,Network,Closed,3.2,T. Amisha,"Updated network config, connectivity restored."
+TKT-F23-1133,10/05/2023,08:10,S0***405,Show Me Center Lab,Furniture issue,Other,Closed,5.4,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-1134,11/20/2023,16:01,S0***152,Kent Library 102,General IT inquiry,Other,Closed,1.7,S. Davis,"Reimaged workstation, software reinstalled."
+TKT-F23-1135,10/16/2023,13:19,S0***667,Carnahan Hall 214,VPN not connecting,Network,Closed,2.4,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-1136,10/09/2023,10:52,S0***061,Show Me Center Lab,Application crashing,Software,Closed,2.0,R. Chen,"Reset credentials, user verified access."
+TKT-F23-1137,10/31/2023,08:08,S0***112,Carnahan Hall 214,IP conflict detected,Network,In Progress,2.3,T. Amisha,Escalated to senior tech for further diagnosis.
+TKT-F23-1138,09/12/2023,10:49,S0***864,Carnahan Hall 214,Furniture issue,Other,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-1139,10/30/2023,16:05,S0***110,Kent Library 101,Room booking question,Other,Closed,5.5,S. Davis,"Reset credentials, user verified access."
+TKT-F23-1140,11/03/2023,09:10,S0***584,Kent Library 101,WiFi authentication failed,Network,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-1141,09/26/2023,16:19,S0***243,Show Me Center Lab,Software install failed,Software,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-1142,09/15/2023,16:20,S0***220,Kent Library 102,Driver conflict,Software,In Progress,1.7,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-1143,10/16/2023,08:44,S0***856,Kent Library 102,SSO failure,Account/Access,Closed,3.1,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-1144,10/02/2023,14:11,S0***593,Carnahan Hall 214,No internet connection,Network,Closed,3.7,S. Davis,"Reset credentials, user verified access."
+TKT-F23-1145,09/04/2023,10:00,S0***542,Kent Library 101,Browser freezing,Software,Closed,4.7,S. Davis,"Reset credentials, user verified access."
+TKT-F23-1146,09/25/2023,14:35,S0***201,Academic Hall 110,General IT inquiry,Other,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-1147,08/31/2023,15:09,S0***679,Show Me Center Lab,Lab equipment request,Other,Closed,5.7,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-1148,08/25/2023,14:28,S0***813,Academic Hall 110,Application crashing,Software,Closed,5.0,S. Davis,Cable swap resolved signal issue.
+TKT-F23-1149,09/18/2023,08:41,S0***051,Academic Hall 110,Room booking question,Other,Closed,2.5,T. Amisha,"Reimaged workstation, software reinstalled."
+TKT-F23-1150,09/15/2023,16:06,S0***500,Kent Library 102,No internet connection,Network,Closed,4.9,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-1151,10/13/2023,13:07,S0***941,Kent Library 102,Lab equipment request,Other,Closed,0.6,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-1152,11/17/2023,09:39,S0***137,Carnahan Hall 214,No internet connection,Network,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-1153,10/26/2023,14:27,S0***772,Show Me Center Lab,Driver conflict,Software,Closed,2.8,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-1154,09/29/2023,12:26,S0***509,Show Me Center Lab,Furniture issue,Other,Closed,2.7,M. Patel,"Reset credentials, user verified access."
+TKT-F23-1155,10/19/2023,16:27,S0***458,Academic Hall 110,USB device not recognized,Hardware,Closed,1.0,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-1156,08/28/2023,15:54,S0***400,Carnahan Hall 214,USB device not recognized,Hardware,Closed,2.7,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-1157,09/25/2023,12:41,S0***775,Kent Library 102,Printer not connecting,Hardware,Closed,3.8,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-1158,11/06/2023,14:22,S0***697,Kent Library 102,Lab equipment request,Other,Closed,5.0,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-1159,09/19/2023,11:52,S0***943,Kent Library 102,Driver conflict,Software,Closed,1.3,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-1160,08/30/2023,08:00,S0***958,Kent Library 101,DNS resolution error,Network,Closed,2.8,M. Patel,Cable swap resolved signal issue.
+TKT-F23-1161,09/19/2023,16:31,S0***852,Kent Library 101,License activation error,Software,Closed,4.1,T. Amisha,"Replaced toner cartridge, tested print job."
+TKT-F23-1162,08/28/2023,16:57,S0***404,Academic Hall 110,IP conflict detected,Network,Closed,1.6,R. Chen,"Reset credentials, user verified access."
+TKT-F23-1163,09/07/2023,14:57,S0***058,Carnahan Hall 214,Furniture issue,Other,Closed,2.8,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-1164,10/23/2023,09:31,S0***924,Kent Library 101,Lab equipment request,Other,Closed,1.8,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-1165,11/13/2023,08:43,S0***782,Show Me Center Lab,Keyboard unresponsive,Hardware,Closed,1.5,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-1166,09/11/2023,09:07,S0***073,Academic Hall 110,DNS resolution error,Network,Closed,1.6,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-1167,10/09/2023,08:55,S0***863,Kent Library 102,DNS resolution error,Network,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-1168,11/13/2023,11:19,S0***016,Kent Library 102,Email access denied,Account/Access,Closed,0.9,R. Chen,"Cleared browser cache, issue resolved."
+TKT-F23-1169,09/07/2023,14:59,S0***382,Kent Library 102,Mouse not working,Hardware,Closed,4.1,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-1170,08/21/2023,11:07,S0***740,Academic Hall 110,License activation error,Software,Closed,1.5,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-1171,10/27/2023,09:17,S0***533,Kent Library 101,Password reset,Account/Access,Closed,4.0,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-1172,09/19/2023,11:41,S0***870,Academic Hall 110,No internet connection,Network,In Progress,4.3,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-1173,09/18/2023,16:57,S0***975,Kent Library 102,Browser freezing,Software,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-1174,11/15/2023,13:43,S0***841,Show Me Center Lab,No internet connection,Network,Closed,2.2,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-1175,09/22/2023,08:46,S0***699,Carnahan Hall 214,General IT inquiry,Other,Closed,3.0,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-1176,10/09/2023,10:42,S0***991,Carnahan Hall 214,Keyboard unresponsive,Hardware,Closed,2.4,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-1177,09/25/2023,08:42,S0***829,Kent Library 101,MFA not working,Account/Access,Closed,4.8,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-1178,09/29/2023,15:24,S0***992,Academic Hall 110,USB device not recognized,Hardware,Closed,3.3,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-1179,10/19/2023,14:15,S0***924,Kent Library 102,License activation error,Software,Closed,0.9,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-1180,11/06/2023,14:41,S0***656,Kent Library 101,License activation error,Software,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-1181,10/10/2023,14:22,S0***448,Kent Library 101,Lab equipment request,Other,Closed,2.1,R. Chen,Cable swap resolved signal issue.
+TKT-F23-1182,10/20/2023,16:58,S0***788,Carnahan Hall 214,Mouse not working,Hardware,Closed,5.9,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-1183,11/03/2023,16:06,S0***451,Academic Hall 110,Driver conflict,Software,Closed,5.0,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-1184,11/20/2023,16:13,S0***882,Academic Hall 110,Furniture issue,Other,Closed,2.2,M. Patel,Cable swap resolved signal issue.
+TKT-F23-1185,11/13/2023,15:45,S0***193,Kent Library 102,PC won't power on,Hardware,Closed,1.1,S. Davis,Cable swap resolved signal issue.
+TKT-F23-1186,10/02/2023,10:52,S0***161,Show Me Center Lab,Furniture issue,Other,Closed,1.9,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-1187,08/22/2023,12:57,S0***232,Kent Library 102,Account locked out,Account/Access,Closed,4.7,M. Patel,"Updated network config, connectivity restored."
+TKT-F23-1188,09/20/2023,08:36,S0***515,Show Me Center Lab,WiFi authentication failed,Network,Closed,1.7,A. Johnson,"Cleared browser cache, issue resolved."
+TKT-F23-1189,09/25/2023,11:36,S0***788,Academic Hall 110,IP conflict detected,Network,In Progress,4.4,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-1190,09/12/2023,08:09,S0***498,Kent Library 102,OS update loop,Software,Closed,1.8,A. Johnson,"Reset credentials, user verified access."
+TKT-F23-1191,10/02/2023,09:08,S0***753,Academic Hall 110,Mouse not working,Hardware,Closed,5.3,A. Johnson,"Updated network config, connectivity restored."
+TKT-F23-1192,09/13/2023,16:50,S0***332,Kent Library 102,Software install failed,Software,Closed,1.5,T. Amisha,"Password reset via AD, user confirmed login."
+TKT-F23-1193,09/12/2023,09:24,S0***680,Kent Library 102,Monitor no signal,Hardware,Closed,2.3,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-1194,11/09/2023,13:54,S0***908,Academic Hall 110,Slow network speed,Network,Closed,4.2,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-1195,10/16/2023,12:12,S0***793,Carnahan Hall 214,Mouse not working,Hardware,In Progress,4.4,M. Patel,"User unavailable, follow-up scheduled."
+TKT-F23-1196,10/16/2023,12:17,S0***780,Academic Hall 110,Account locked out,Account/Access,Closed,3.9,S. Davis,"Reset credentials, user verified access."
+TKT-F23-1197,09/08/2023,09:30,S0***980,Academic Hall 110,USB device not recognized,Hardware,Closed,1.5,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-1198,08/28/2023,12:14,S0***170,Kent Library 101,Browser freezing,Software,Closed,2.9,M. Patel,"Cleared browser cache, issue resolved."
+TKT-F23-1199,11/13/2023,13:24,S0***796,Academic Hall 110,VPN not connecting,Network,Closed,4.2,S. Davis,"Updated network config, connectivity restored."
+TKT-F23-1200,11/20/2023,10:32,S0***968,Carnahan Hall 214,Canvas login loop,Account/Access,Closed,0.5,T. Amisha,"Reset credentials, user verified access."
+TKT-F23-1201,09/05/2023,14:34,S0***464,Carnahan Hall 214,IP conflict detected,Network,Closed,3.4,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-1202,10/27/2023,16:19,S0***728,Kent Library 102,Application crashing,Software,Closed,1.0,S. Davis,"Reinstalled driver, confirmed working."
+TKT-F23-1203,11/06/2023,13:32,S0***873,Carnahan Hall 214,Account locked out,Account/Access,Closed,4.4,R. Chen,"Updated network config, connectivity restored."
+TKT-F23-1204,10/09/2023,13:45,S0***674,Carnahan Hall 214,WiFi authentication failed,Network,Closed,4.3,R. Chen,Cable swap resolved signal issue.
+TKT-F23-1205,10/23/2023,10:37,S0***579,Kent Library 102,Canvas login loop,Account/Access,Closed,3.0,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-1206,09/18/2023,14:08,S0***695,Carnahan Hall 214,Account locked out,Account/Access,Closed,5.3,S. Davis,"Cleared browser cache, issue resolved."
+TKT-F23-1207,10/24/2023,15:22,S0***802,Carnahan Hall 214,Account locked out,Account/Access,In Progress,3.1,A. Johnson,Escalated to senior tech for further diagnosis.
+TKT-F23-1208,09/18/2023,08:53,S0***344,Kent Library 102,PC won't power on,Hardware,Closed,2.3,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-1209,11/20/2023,10:54,S0***433,Academic Hall 110,OS update loop,Software,In Progress,1.4,A. Johnson,Awaiting replacement part from IT supply room.
+TKT-F23-1210,09/18/2023,15:01,S0***037,Carnahan Hall 214,Email access denied,Account/Access,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-1211,09/06/2023,09:59,S0***653,Carnahan Hall 214,Account locked out,Account/Access,Closed,4.2,A. Johnson,"Reimaged workstation, software reinstalled."
+TKT-F23-1212,10/23/2023,12:39,S0***261,Kent Library 101,WiFi authentication failed,Network,In Progress,2.7,S. Davis,Awaiting replacement part from IT supply room.
+TKT-F23-1213,09/11/2023,16:26,S0***790,Kent Library 102,Application crashing,Software,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-1214,09/04/2023,13:58,S0***592,Kent Library 102,IP conflict detected,Network,Closed,1.3,R. Chen,"Replaced toner cartridge, tested print job."
+TKT-F23-1215,09/04/2023,13:22,S0***496,Kent Library 101,WiFi authentication failed,Network,In Progress,4.0,R. Chen,Escalated to senior tech for further diagnosis.
+TKT-F23-1216,09/18/2023,16:05,S0***611,Show Me Center Lab,PC won't power on,Hardware,Closed,4.4,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-1217,11/13/2023,12:11,S0***718,Academic Hall 110,License activation error,Software,Closed,3.6,S. Davis,"Reset credentials, user verified access."
+TKT-F23-1218,09/25/2023,16:13,S0***248,Academic Hall 110,Password reset,Account/Access,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-1219,11/03/2023,13:57,S0***629,Academic Hall 110,WiFi authentication failed,Network,Open,,R. Chen,"Ticket submitted, pending assignment."
+TKT-F23-1220,10/20/2023,10:05,S0***084,Kent Library 102,Keyboard unresponsive,Hardware,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-1221,11/01/2023,10:40,S0***572,Academic Hall 110,Furniture issue,Other,Closed,2.6,A. Johnson,"Replaced toner cartridge, tested print job."
+TKT-F23-1222,09/11/2023,12:23,S0***271,Academic Hall 110,SSO failure,Account/Access,Closed,4.8,M. Patel,"Reimaged workstation, software reinstalled."
+TKT-F23-1223,08/28/2023,13:46,S0***962,Show Me Center Lab,Application crashing,Software,Closed,0.6,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-1224,08/28/2023,14:44,S0***088,Kent Library 101,Browser freezing,Software,Closed,2.7,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-1225,10/02/2023,13:51,S0***543,Academic Hall 110,Keyboard unresponsive,Hardware,Open,,T. Amisha,"Ticket submitted, pending assignment."
+TKT-F23-1226,10/31/2023,09:18,S0***530,Academic Hall 110,Printer not connecting,Hardware,Closed,2.1,T. Amisha,"Cleared browser cache, issue resolved."
+TKT-F23-1227,11/16/2023,11:06,S0***041,Carnahan Hall 214,Mouse not working,Hardware,Open,,M. Patel,"Ticket submitted, pending assignment."
+TKT-F23-1228,10/16/2023,11:15,S0***888,Kent Library 101,DNS resolution error,Network,Closed,1.2,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-1229,08/30/2023,15:56,S0***455,Show Me Center Lab,PC won't power on,Hardware,Open,,A. Johnson,"Ticket submitted, pending assignment."
+TKT-F23-1230,10/03/2023,12:29,S0***165,Carnahan Hall 214,Driver conflict,Software,Closed,5.0,T. Amisha,Cable swap resolved signal issue.
+TKT-F23-1231,11/02/2023,08:15,S0***420,Kent Library 102,Keyboard unresponsive,Hardware,In Progress,3.2,M. Patel,Awaiting replacement part from IT supply room.
+TKT-F23-1232,09/25/2023,16:24,S0***999,Carnahan Hall 214,PC won't power on,Hardware,Closed,4.0,A. Johnson,"Password reset via AD, user confirmed login."
+TKT-F23-1233,11/03/2023,08:05,S0***347,Academic Hall 110,Browser freezing,Software,Closed,1.8,S. Davis,"Password reset via AD, user confirmed login."
+TKT-F23-1234,10/11/2023,15:22,S0***575,Carnahan Hall 214,Furniture issue,Other,Closed,4.3,T. Amisha,"Reinstalled driver, confirmed working."
+TKT-F23-1235,08/28/2023,15:06,S0***460,Kent Library 101,Mouse not working,Hardware,Closed,4.1,A. Johnson,"Reinstalled driver, confirmed working."
+TKT-F23-1236,10/06/2023,13:18,S0***447,Academic Hall 110,Mouse not working,Hardware,In Progress,4.4,M. Patel,Escalated to senior tech for further diagnosis.
+TKT-F23-1237,09/11/2023,14:18,S0***646,Academic Hall 110,Email access denied,Account/Access,Closed,3.4,M. Patel,"Reset credentials, user verified access."
+TKT-F23-1238,11/06/2023,09:29,S0***837,Academic Hall 110,SSO failure,Account/Access,Closed,3.6,M. Patel,"Reset credentials, user verified access."
+TKT-F23-1239,09/04/2023,08:45,S0***463,Kent Library 101,VPN not connecting,Network,Closed,1.8,R. Chen,"Password reset via AD, user confirmed login."
+TKT-F23-1240,09/20/2023,09:39,S0***635,Academic Hall 110,Account locked out,Account/Access,Closed,4.3,M. Patel,"Reinstalled driver, confirmed working."
+TKT-F23-1241,09/18/2023,14:08,S0***131,Show Me Center Lab,License activation error,Software,Closed,5.9,R. Chen,"Reimaged workstation, software reinstalled."
+TKT-F23-1242,09/18/2023,15:00,S0***105,Academic Hall 110,IP conflict detected,Network,Open,,S. Davis,"Ticket submitted, pending assignment."
+TKT-F23-1243,11/15/2023,12:53,S0***795,Kent Library 101,Mouse not working,Hardware,Closed,3.7,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-1244,10/23/2023,16:55,S0***921,Kent Library 101,Canvas login loop,Account/Access,Closed,4.3,M. Patel,"Password reset via AD, user confirmed login."
+TKT-F23-1245,09/01/2023,13:25,S0***594,Academic Hall 110,Account locked out,Account/Access,Closed,2.7,R. Chen,"Reinstalled driver, confirmed working."
+TKT-F23-1246,09/06/2023,10:20,S0***589,Kent Library 101,Furniture issue,Other,Closed,4.9,A. Johnson,"Updated network config, connectivity restored."
