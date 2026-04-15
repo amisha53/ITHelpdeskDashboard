@@ -4,7 +4,7 @@ Semester-over-semester analysis of IT support ticket data from SEMO computer lab
 
 ## What it does
 
-- Tracks 1,200+ tickets per semester across 5 lab locations
+- Tracks 1,200+ tickets per semester across multiple lab locations
 - KPI cards: total volume, avg resolution time, first-contact resolution rate, daily volume
 - Ticket log with search/filter by category, status, and technician
 - Timesheet view showing per-staff shift logs, hours worked, and ticket counts
@@ -45,8 +45,8 @@ To host it:
 
 ## Data notes
 
-Student requester IDs are anonymized in the format `S0***XXX` per FERPA guidelines. Ticket data was exported from the SEMO IT ServiceDesk system at the end of each semester. All personal identifying information has been removed.
+The data in this repository is simulated. Real ticket records cannot be shared publicly due to FERPA restrictions, so the dataset was built to reflect the same structure and patterns as the actual system.
 
 ## Background
 
-Built during my time as a Computer Lab Assistant in the IT Department at Southeast Missouri State University (Aug 2022 — May 2026). The dashboard was used by lab supervisors to review technician performance and plan shift coverage for the following semester.
+Built as a data analytics course project at Southeast Missouri State University. Also worked as a Computer Lab Assistant in the IT Department at the time, so the KPIs and categories were modeled around what would actually be useful there.
